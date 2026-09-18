@@ -3,7 +3,7 @@
   "english_name": "Ye Sun",
   "email": "cs.yesun@gmail.com",
   "updated": "2026-09-18",
-  "blog_url": "https://blog.ye-sun.com",
+  "blog_url": "https://ye-sun.com",
   "intro": "I am a PhD student in Software Engineering at the School of Computer Science and Engineering, Beihang University, in an integrated master’s–PhD program. I expect to graduate in June 2027. My research focuses on knowledge graph reasoning, data mining, and visual analytics.",
   "education": [
     {
@@ -24,10 +24,7 @@
       "period": "2024.01–2025.01",
       "status": "VLDB 2025, CCF-A · First author · Published",
       "summary": "Addresses the black-box nature of embedding-model decisions by independently proposing an explanation framework that combines ontological closed-path rules and relational-path evidence.",
-      "details": [
-        "Designs a coordinated rule-mining and path-search mechanism for structured explanation generation, integrating ontological closed-path rules with relational-path evidence into a quantitatively evaluable framework.",
-        "On standard benchmarks, improves two explanation-quality metrics by approximately 20% and reduces explanation-generation time by 61.4% against the best comparison methods, demonstrating gains in both explanation quality and computational efficiency."
-      ],
+      "details": [],
       "links": {
         "Code": "https://github.com/cs-anonymous/eXpath"
       }
@@ -38,10 +35,7 @@
       "period": "2025.08–2026.06",
       "status": "ICDE 2027, CCF-A · First author · Accepted",
       "summary": "Leads the design of sparse second-order corrections and a two-stage training framework to model complementarity and redundancy in rule aggregation.",
-      "details": [
-        "Models dependencies among jointly triggered rules by introducing signed gains in log-failure evidence space to distinguish complementary from redundant evidence.",
-        "Across seven datasets, raises average MRR from 0.382 to 0.396, achieves 21 best or tied-best metrics among interpretable methods, and improves MRR by approximately 10.7% on dependency-rich subsets."
-      ],
+      "details": [],
       "links": {
         "Code": "https://github.com/cs-anonymous/RuleDep"
       }
@@ -52,10 +46,7 @@
       "period": "2023.09–2024.08",
       "status": "TVCG 2025, CCF-A · First author · Published",
       "summary": "Addresses the joint representation of within-topic citations and cross-topic influence in multi-topic scholarly evolution by proposing a hierarchical graph representation and IFHL layout.",
-      "details": [
-        "Integrates both relationship types into a unified visualization framework for complex evolutionary structures.",
-        "Leads the design of GeneticPrism overview and GeneticScroll detail views covering topic overlap, temporal evolution, and cross-topic influence, enabling multi-scale linked exploration."
-      ],
+      "details": [],
       "links": {
         "Code": "https://github.com/visdata/GeneticPrism",
         "Live system": "https://genetic-flow.com/"
@@ -67,10 +58,7 @@
       "period": "2026.04–2026.06",
       "status": "AAAI 2027, CCF-A · First author · Under review",
       "summary": "Builds a note-level structured performance-generation framework that generates expressive performances from discrete symbols through relative-timing modeling and continuous distribution prediction.",
-      "details": [
-        "Designs typed encoding that fuses pitch, duration, loudness, and other note attributes into one Transformer timestep, with score-relative timing deviations for fine-grained expressive control.",
-        "On ASAP, reduces PP HR by 15.2% against PianistTransformer and lowers inference cost for the specified test task by 95.3%, improving deployability and iteration efficiency."
-      ],
+      "details": [],
       "links": {}
     },
     {
@@ -90,9 +78,7 @@
       "period": "Mar 2026–Present",
       "org": "Software development · MaterBrain",
       "summary": "Participates in Agent Harness architecture design for end-to-end materials R&D and builds the core framework supporting agent execution.",
-      "details": [
-        "Designed and developed a Paper Browser MCP tool for automated retrieval and question answering over thousands of materials-science papers. Participates in the research group’s industry-academia collaboration with MaterBrain, supporting deployment of the agent framework and tools in materials R&D workflows."
-      ]
+      "details": []
     },
     {
       "id": "classification",
@@ -110,10 +96,7 @@
       "period": "Sep 2023–Present",
       "org": "Independent development and operations",
       "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction.",
-      "details": [
-        "The system has served 102,129 users worldwide and supported 507,827 visits, and has received software-copyright registration.",
-        "Compiled Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end visual interaction and independently maintaining the full stack."
-      ]
+      "details": []
     },
     {
       "id": "sensetime-aigc",
@@ -137,9 +120,7 @@
       "period": "Sep 2021–Aug 2024 · National Key R&D Program subproject",
       "org": "Subproject assistant",
       "summary": "Led construction of the database and materials knowledge graph, participating throughout the project from proposal to acceptance and ensuring scheduled delivery reviews.",
-      "details": [
-        "Designed a 10^5-scale multimodal materials database integrating heterogeneous sources to support synthesis-condition recommendation and knowledge discovery. Implemented both functions with a knowledge graph to support intelligent materials R&D."
-      ]
+      "details": []
     }
   ],
   "skills": [
@@ -256,7 +237,7 @@
     "phone": "13872530255",
     "wechat": "Sunye_1287495769",
     "location": "Beijing, Shanghai, Hangzhou, Wuhan",
-    "target": "AI Agent algorithm engineer, researcher",
+    "target": "Algorithm engineer, researcher",
     "university_email": "sunie@buaa.edu.cn"
   },
   "supervisors": [
