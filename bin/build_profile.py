@@ -42,13 +42,15 @@ def papers():
 
 def personal():
     c=D['contact'];parts=[]
-    for label,value,url in [('微信／手机',c['phone'],'tel:'+c['phone'].replace(' ','')),('邮箱',D['email'],'mailto:'+D['email']),('学校邮箱',c['university_email'],'mailto:'+c['university_email'])]:
+    for label,value,url in [('微信／手机',c['phone'],'tel:'+c['phone'].replace(' ','')),('邮箱',D['email'],'mailto:'+D['email']),('微信',c['wechat'],None),('学校邮箱',c['university_email'],'mailto:'+c['university_email'])]:
         value=esc(value)
         if url: value=f'<a href="{esc(url)}">{value}</a>'
         parts.append(f'<div><dt>{tr(label)}</dt><dd>{value}</dd></div>')
     supervisors=' · '.join(f'{tr(x["role"])}：<a href="{esc(x["url"])}">{esc(x["name_en"] if LANG=="en" else x["name"])}</a>' for x in D['supervisors'])
     facts=' · '.join(esc(v) for k,v in D['personal'] if k in ('所在城市','预计毕业','Location','Expected graduation'))
-    return f'<div class="personal-intro"><img class="portrait" src="{local("/assets/img/ye-sun.jpg")}" width="124" height="180" alt="{esc(D["english_name"] if LANG=="en" else D["name"])}" decoding="async"><div><p class="intro">{esc(D["intro"])}</p><p class="supervisors">{supervisors}</p><p class="meta">{facts}</p><dl class="contact-grid">'+''.join(parts)+'</dl></div></div>'
+    location = c['location'] if LANG == 'zh-CN' else c['location']
+    target = c['target'] if LANG == 'zh-CN' else c['target']
+    return f'<div class="personal-intro"><img class="portrait" src="{local("/assets/img/ye-sun.jpg")}" width="124" height="180" alt="{esc(D["english_name"] if LANG=="en" else D["name"])}" decoding="async"><div><p class="intro">{esc(D["intro"])}</p><p class="supervisors">{supervisors}</p><p class="meta">{facts}</p><p class="meta">{esc(location)} · {esc(target)}</p><dl class="contact-grid">'+''.join(parts)+'</dl></div></div>'
 
 def page(name,title,path,content,nav=False,nav_label=None,nav_order=None):
     pref='en-' if LANG=='en' else ''
@@ -63,7 +65,9 @@ def page(name,title,path,content,nav=False,nav_label=None,nav_order=None):
     (ROOT/'_pages'/(pref+name)).write_text('\n'.join(fm))
 
 def pages_for_language():
-    intro=personal();edu=''.join(entry(x) for x in D['education']);research=''.join(entry(x,True) for x in D['research']);engineering=''.join(entry(x,True) for x in D['experience']);awards='<ul>'+''.join('<li>'+esc(a)+'</li>' for a in D['awards'])+'</ul>'
+    research_order={'geneticprism':0,'expath':1,'ruledep':2,'inspire':3,'cueir':4}
+    experience_order={'materagent':0,'geneticflow':1,'classification':2,'materials':3,'sensetime-aigc':4,'sensetime-tools':5}
+    intro=personal();edu=''.join(entry(x) for x in D['education']);research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)));engineering=''.join(entry(x,True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)));awards='<ul>'+''.join('<li>'+esc(a)+'</li>' for a in D['awards'])+'</ul>'
     def heading(s,ident=''): return f'<h2'+(f' id="{ident}"' if ident else '')+'>'+tr(s)+'</h2>'
     skills='<dl class="skills-list">'+''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd></div>' for x in D['skills'])+'</dl>'
     toc='<nav class="toc" aria-label="'+('CV sections' if LANG=='en' else '履历目录')+'">'+''.join(f'<a href="#{i}">{tr(t)}</a>' for i,t in [('education','教育经历'),('research','研究经历'),('engineering','工程实践'),('skills','技术与语言'),('publications','论文列表')])+'</nav>'
