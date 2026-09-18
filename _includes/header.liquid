@@ -1,0 +1,70 @@
+{% assign locale = page.lang | default: site.lang %}
+{% assign home_url = '/' %}
+{% if locale == 'en' %}{% assign home_url = '/en/' %}{% endif %}
+<header>
+  <nav
+    id="navbar"
+    class="navbar navbar-light navbar-expand-sm fixed-top"
+    aria-label="{% if locale == 'en' %}Main navigation{% else %}主导航{% endif %}"
+  >
+    <div class="container">
+      <a class="navbar-brand title" href="{{ home_url | relative_url }}">Ye Sun · 孙烨</a>
+      <button
+        class="navbar-toggler collapsed navbar-toggler-main"
+        type="button"
+        data-nav-toggle="navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="{% if locale == 'en' %}Toggle navigation{% else %}展开导航{% endif %}"
+      >
+        <span class="icon-bar top-bar"></span><span class="icon-bar middle-bar"></span><span class="icon-bar bottom-bar"></span>
+      </button>
+      <div class="collapse navbar-collapse navbar-collapse-main" id="navbarNav">
+        <ul class="navbar-nav navbar-menu-list flex-nowrap">
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.profile.blog_url }}">
+              {%- if locale == 'en' %}Blog{% else %}博客{% endif -%}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.profile.scholar_url }}">
+              {%- if locale == 'en' %}Google Scholar{% else %}谷歌学术{% endif -%}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ site.data.profile.bilibili_url }}">
+              {%- if locale == 'en' %}Bilibili{% else %}哔哩哔哩{% endif -%}
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ '/assets/pdf/Ye-Sun-Resume-ZH.pdf' | relative_url }}" download>
+              {%- if locale == 'en' %}Download CV{% else %}下载简历{% endif -%}
+            </a>
+          </li>
+          {% if page.alternate_url %}
+            <li class="nav-item">
+              <a
+                class="nav-link language-switch"
+                href="{{ page.alternate_url | relative_url }}"
+                hreflang="{% if locale == 'en' %}zh-CN{% else %}en{% endif %}"
+                lang="{% if locale == 'en' %}zh-CN{% else %}en{% endif %}"
+              >
+                {%- if locale == 'en' %}中文{% else %}English{% endif -%}
+              </a>
+            </li>
+          {% endif %}
+          <li class="toggle-container">
+            <button
+              id="light-toggle"
+              type="button"
+              title="{% if locale == 'en' %}Change theme{% else %}切换主题{% endif %}"
+              aria-label="{% if locale == 'en' %}Change theme{% else %}切换主题{% endif %}"
+            >
+              <i id="light-toggle-system"></i><i id="light-toggle-dark"></i><i id="light-toggle-light"></i>
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</header>

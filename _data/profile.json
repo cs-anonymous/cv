@@ -1,0 +1,279 @@
+{
+  "name": "孙烨",
+  "english_name": "Ye Sun",
+  "email": "cs.yesun@gmail.com",
+  "updated": "2026-09-17",
+  "blog_url": "https://blog.ye-sun.com",
+  "intro": "北京航空航天大学计算机学院软件工程博士研究生（硕博连读），预计于 2027 年 6 月毕业。研究方向为知识图谱推理、可视分析与智能体记忆。",
+  "education": [
+    {
+      "title": "北京航空航天大学 · 软件工程",
+      "period": "2023.09–至今",
+      "text": "博士研究生（硕博连读），预计 2027.06 毕业；GPA 3.87。研究方向：知识图谱推理、可视分析、智能体记忆，相关研究成果已发表于多篇CCF-A类论文。"
+    },
+    {
+      "title": "北京航空航天大学 · 计算机科学与技术",
+      "period": "2021.09–2023.06",
+      "text": "硕士阶段（硕博连读），GPA 3.86。 硕士阶段排名 13/143。专业成绩：GPA: 3.87/4.00；专业排名：13/143；主修课程：数据挖掘（100）、算法设计与分析（94）、软件工程（95）、模式识别（93）。"
+    },
+    {
+      "title": "北京航空航天大学 · 计算机科学与技术",
+      "period": "2017.09–2021.06",
+      "text": "本科。专业成绩：GPA: 3.67/4.00；主修课程：数学分析（100）、软件工程（98），深度学习（94）。"
+    }
+  ],
+  "research": [
+    {
+      "id": "expath",
+      "title": "eXpath · 知识图谱链接预测解释",
+      "period": "2024.01–2025.01",
+      "status": "PVLDB / VLDB 2025 · 第一作者 · 已录用",
+      "summary": "融合本体闭环规则与关系路径证据，设计规则挖掘和路径搜索算法；两个解释质量指标约提升 20%，解释耗时减少 61.4%。",
+      "details": [
+        "针对嵌入式链接预测缺乏可理解语义证据的问题，将关系路径与本体闭环规则结合，生成结构化解释。",
+        "独立完成问题提出、方法设计、实现、实验分析与论文撰写；将规则挖掘和路径搜索落地为可评测的解释框架。",
+        "在论文基准实验中，相比最佳对比方法，两个解释质量指标约提升 20%、解释耗时减少 61.4%；这些数字衡量解释质量与效率。"
+      ],
+      "links": {
+        "代码": "https://github.com/cs-anonymous/eXpath"
+      }
+    },
+    {
+      "id": "ruledep",
+      "title": "RuleDep · 依赖感知的规则聚合",
+      "period": "2025.08–2026.06",
+      "status": "ICDE 2027 · 第一作者 · 已录用",
+      "summary": "显式建模规则之间的互补与冗余，以稀疏二阶修正和两阶段训练改进聚合；七数据集平均 MRR 相比 LR-Agg 提升约 3.7%。",
+      "details": [
+        "研究共同触发规则的依赖关系，在 log-failure evidence 空间引入带符号增益，区分互补证据与冗余证据。",
+        "独立完成方法、算法实现与实验；以 Kotlin/JVM 编写核心实现，结合 CPU 多线程和原子操作管理共享状态。",
+        "RuleDep-ens 的七数据集平均 MRR 从 0.382 提升至 0.396；在可解释方法比较中，21 项指标最佳或并列最佳。"
+      ],
+      "links": {
+        "代码": "https://github.com/cs-anonymous/RuleDep"
+      }
+    },
+    {
+      "id": "geneticprism",
+      "title": "GeneticPrism · 层次图设计与布局算法",
+      "period": "2023.09–2024.08",
+      "status": "IEEE TVCG · 第一作者 · 已录用",
+      "summary": "提出多主题研究演化的层次图表示与 IFHL 布局，联合组织主题内引用和跨主题影响；通过案例分析与 20 人用户研究评估。",
+      "details": [
+        "设计 GeneticPrism 总览与 GeneticScroll 局部视图，支持主题重叠、时间演化及跨主题影响的多尺度分析。",
+        "设计 Integrated Flow Hierarchical Layout（IFHL），将主题内部引用与跨主题流入／流出共同纳入分层布局，结合代理节点、加权交叉优化与边捆绑。",
+        "独立完成研究设计、算法实现、实验和写作；采用三个案例及 20 人用户研究评估。问卷七个维度均报告 p < .001，反映主观可用性与感知有效性。"
+      ],
+      "links": {
+        "代码": "https://github.com/visdata/GeneticPrism",
+        "在线系统": "https://genetic-flow.com/"
+      }
+    },
+    {
+      "id": "inspire",
+      "title": "INSPIRE · 表现力钢琴演奏生成",
+      "period": "2026.04–2026.08",
+      "status": "AAAI 2027 在投 · 第一作者",
+      "summary": "以音符级结构化表示、谱面相对时序建模和连续分布预测实现演奏生成，独立完成数据处理、模型、训练与评估。",
+      "details": [
+        "将音符属性融合为单个 Transformer 时间步，以类型化编码和谱面相对时序偏差建模表现力控制。",
+        "基于 PyTorch 与 Transformers 实现自定义模型组件和训练逻辑，贯通预处理、训练、推理及多粒度分布评估。",
+        "ASAP 测试中，CINR-bounded 的 PP Human-Relative Wasserstein 相比 Pianist Transformer 下降 15.2%；指定测试任务推理成本由 126.4 降为 6.0 GPU-minutes。"
+      ],
+      "links": {}
+    },
+    {
+      "id": "cueir",
+      "title": "CueIR · Agent 长期记忆",
+      "period": "2026.08–至今",
+      "status": "在研",
+      "summary": "研究可追溯的记忆组织与检索，已跑通记忆图构建及智能体工具，并在 LoCoMo 与 MemoryAgentBench 数据集上开展实验验证。",
+      "details": [],
+      "links": {}
+    }
+  ],
+  "experience": [
+    {
+      "id": "materagent",
+      "title": "MaterAgent · 面向材料研发全流程的 Agent Harness",
+      "period": "进行中",
+      "org": "导师组企业合作 · 新材智脑 / MaterBrain",
+      "summary": "面向材料研发全流程开展 Agent Harness 架构与配套工具开发。",
+      "details": ["参与导师组与新材智脑（MaterBrain）的合作研发，将智能体运行支撑框架与工具开发用于材料研发流程。设计并开发 Paper Browser MCP 工具，实现材料领域学术文献的自动化检索，有效降低研究人员文献调研的时间成本，提升信息获取效率。"]
+    },
+    {
+      "id": "classification",
+      "title": "基于深度科研智能体的数据分类分级",
+      "period": "2024.12–2025.05",
+      "org": "导师组合作项目",
+      "summary": "开发 LLM 实体识别工具，构建 RAG 驱动的数据分类分级流程，支持敏感数据自动标注与调优。",
+      "details": ["参与科研智能体平台建设，将实体识别、检索增强生成与分类分级流程结合。团队获评北京航空航天大学人工智能领域十大优秀团队称号。"]
+    },
+    {
+      "id": "geneticflow",
+      "title": "GeneticFlow · 学术可视分析系统",
+      "period": "2023.09 起",
+      "org": "独立开发与维护 · GeneticPrism 工程实践",
+      "summary": "独立开发前后端及可视化组件，集成 JavaScript、D3、Graphviz / WebAssembly、Flask 与 MySQL。",
+      "details": [
+        "从 Graphviz C++ 源码编译浏览器布局组件，连接图布局计算与可视交互；独立维护前端、后端和数据库。",
+        "平台计数为 102,129 User、507,827 visits（2026.09.15 快照）；该数据为平台整体统计。系统上线后累计服务全球102,129名用户，支撑507,827次访问，并获得软件著作权登记。"
+      ]
+    },
+    {
+      "id": "sensetime-aigc",
+      "title": "商汤科技 · AI 图片生成后端开发",
+      "period": "2023.02–2023.08",
+      "org": "实习 · 秒画",
+      "summary": "参与秒画后端开发，独立开发 Discord Bot 并上线商汤官方 Discord，所在服务器有上千名用户。",
+      "details": []
+    },
+    {
+      "id": "sensetime-tools",
+      "title": "商汤科技 · 模型工具链研发",
+      "period": "2021.06–2022.08",
+      "org": "实习",
+      "summary": "独立开发 spring.remote 工具，支持集群登录及任务提交管理；获优秀实习生荣誉。",
+      "details": []
+    },
+    {
+      "id": "materials",
+      "title": "稀土催化材料数据库与数字化研发平台",
+      "period": "2021.09–2024.08 · 国家重点研发计划课题",
+      "org": "北航 · 项目 2021YFB3500700 课题一",
+      "summary": "参与材料数据库建设，负责多源材料知识图谱、本体设计与可视化模块，支持材料数据组织与知识发现。",
+      "details": ["作为课题助理及组长参与研发流程；整合材料多源异构数据，支持合成条件推荐及知识发现。主导数据库与材料知识图谱构建，全程参与项目从申报到验收的完整落地，确保各阶段交付物按期通过评审。设计并构建规模达10^5级别的多模态材料数据库，整合多源异构数据，为合成条件推荐与知识发现功能提供底层数据支撑。基于知识图谱实现合成条件推荐与知识发现功能，有效支撑材料智能化研发流程。"]
+    }
+  ],
+  "skills": [
+    {
+      "label": "编程语言",
+      "text": "掌握 Python、Java、C/C++，各语言累计代码量均不少于一万行；熟悉 Kotlin/JVM。"
+    },
+    {
+      "label": "机器学习",
+      "text": "熟悉机器学习原理及 PyTorch、scikit-learn、Transformers；机器学习、数据挖掘、深度学习等课程成绩均在 90 分以上。"
+    },
+    {
+      "label": "系统与后端",
+      "text": "熟悉 Linux 运维、Shell 编程及 Docker；具备 Flask、Django、MySQL、PostgreSQL 开发经验。"
+    },
+    {
+      "label": "前端与可视化",
+      "text": "熟悉 JavaScript、HTML、CSS、D3、Vue；修读计算机图形学，担任可视化课程助教，主要参与的可视化项目已被 CCF-A 类会议录用。"
+    },
+    {
+      "label": "英语与认证",
+      "text": "TOEFL 105，GRE 327；CCF CSP 认证排名前 8.79%。"
+    }
+  ],
+  "visit": {
+    "title": "慕尼黑工业大学 · 科研访学",
+    "period": "2025.09–2025.12",
+    "text": "与 Stephen Kobourov 教授开展知识图谱可视化与图绘制研究；后续与 Maribel Acosta 合作开展规则推理研究。"
+  },
+  "awards": [
+    "北京航空航天大学研究生一等奖学金 · 2021、2023、2025、2026",
+    "ACT 实验室学术贡献奖 · 2026",
+    "北京航空航天大学人工智能领域十大优秀团队 · 2025",
+    "优秀实习生 · 2022.8",
+    "北京航空航天大学数学建模竞赛一等奖 · 2021：三人团队面向卡车盲区智能监控预警，完成静态与动态盲区分析、摄像头位置优化、YOLO 目标检测及可视化反馈。",
+    "第 30 届冯如杯科技竞赛三等奖 · 2020：带领三人团队开发 MusiConvertor 音轨分离与乐谱识别系统，将含噪混合音乐的音轨分离、数字音频识别与乐谱转换集成为端到端系统。",
+    "商汤优秀实习生 · 模型工具链实习期间",
+    "北航数学建模竞赛一等奖 · 2019.7"
+  ],
+  "publications": [
+    {
+      "title": "RuleDep: Modeling Complementarity and Redundancy in Rule Aggregation for KGC",
+      "authors": "Ye Sun, Maribel Acosta, Lei Shi, Yongxin Tong",
+      "venue": "ICDE 2027 · 已录用",
+      "role": "第一作者",
+      "url": "https://github.com/cs-anonymous/RuleDep"
+    },
+    {
+      "title": "eXpath: Explaining Knowledge Graph Link Prediction with Ontological Closed Path Rules",
+      "authors": "Ye Sun, Lei Shi, Yongxin Tong",
+      "venue": "PVLDB / VLDB 2025 · 已录用",
+      "role": "第一作者",
+      "url": "https://github.com/cs-anonymous/eXpath"
+    },
+    {
+      "title": "GeneticPrism: Multifaceted Visualization of Citation-based Scholarly Research Evolution",
+      "authors": "Ye Sun, Zipeng Liu, Yuankai Luo, Lei Xia, Lei Shi",
+      "venue": "IEEE TVCG · 已录用",
+      "role": "第一作者",
+      "url": "https://github.com/visdata/GeneticPrism"
+    },
+    {
+      "title": "INSPIRE: Integrated Note-based Score Performance Interpretation, Rendering and Expression",
+      "authors": "Ye Sun（第一作者）",
+      "venue": "AAAI 2027 · 在投",
+      "role": "第一作者",
+      "url": ""
+    },
+    {
+      "title": "“It’s the model, folks.” An Extra Summative Evaluation Factor for Visual Analytics",
+      "authors": "",
+      "venue": "IEEE VIS 2026 · 已录用",
+      "role": "第四作者",
+      "url": ""
+    },
+    {
+      "title": "LLM-Based High-Performance Material Synthesis Route Extraction using Human-AI-Curated Few-Shot Demonstrations",
+      "authors": "",
+      "venue": "JACS 2025 · 已录用",
+      "role": "第九作者（共 18 位）",
+      "url": ""
+    },
+    {
+      "title": "How “Applied” is Fifteen Years of VAST Conference?",
+      "authors": "Lei Shi, Lei Xia, Zipeng Liu, Ye Sun, Huijie Guo, Klaus Mueller",
+      "venue": "IEEE VIS 2023 · 已录用",
+      "role": "第四作者",
+      "url": ""
+    },
+    {
+      "title": "RankFIRST: Visual Analysis for Factor Investment by Ranking Stock Timeseries",
+      "authors": "",
+      "venue": "IEEE TVCG 2022 · 已录用",
+      "role": "第四作者",
+      "url": ""
+    },
+    {
+      "title": "基于多源异构数据的稀土材料知识图谱",
+      "authors": "",
+      "venue": "HHME 2022 · 已录用",
+      "role": "第一作者",
+      "url": ""
+    }
+  ],
+  "personal": [
+    ["所在城市", "北京，中国"],
+    ["院系", "北京航空航天大学 · 计算机学院"],
+    ["培养阶段", "软件工程博士研究生 · 硕博连读"],
+    ["导师", "时磊教授（Lei Shi）"],
+    ["预计毕业", "2027 年 6 月"],
+    ["学校邮箱", "sunie@buaa.edu.cn"]
+  ],
+  "contact": {
+    "phone": "13872530255",
+    "wechat": "13872530255",
+    "university_email": "sunie@buaa.edu.cn"
+  },
+  "supervisors": [
+    {
+      "role": "导师",
+      "name": "时磊",
+      "name_en": "Lei Shi",
+      "url": "https://leishidata.com/"
+    },
+    {
+      "role": "副导师",
+      "name": "童咏昕",
+      "name_en": "Yongxin Tong",
+      "url": "https://scholar.google.com/citations?user=aeCHfDIAAAAJ&hl=en"
+    }
+  ],
+  "scholar_url": "https://scholar.google.com/citations?user=nGW0RhoAAAAJ",
+  "bilibili_url": "https://space.bilibili.com/173872440"
+}

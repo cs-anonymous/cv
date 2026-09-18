@@ -1,0 +1,285 @@
+{
+  "name": "孙烨",
+  "english_name": "Ye Sun",
+  "email": "cs.yesun@gmail.com",
+  "updated": "2026-09-17",
+  "blog_url": "https://blog.ye-sun.com",
+  "intro": "I am a PhD student in Software Engineering at the School of Computer Science and Engineering, Beihang University, in an integrated master’s–PhD program. I expect to graduate in June 2027. My research focuses on knowledge graph reasoning, visual analytics, and agent memory.",
+  "education": [
+    {
+      "title": "Beihang University · Software Engineering",
+      "period": "Sep 2023–Present",
+      "text": "PhD student in an integrated master’s–PhD program; expected Jun 2027. GPA: 3.87. Research focuses on knowledge graph reasoning, visual analytics, and agent memory; related results have appeared in multiple CCF-A papers."
+    },
+    {
+      "title": "Beihang University · Computer Science and Technology",
+      "period": "Sep 2021–Jun 2023",
+      "text": "Master’s-stage study in the integrated master’s–PhD program. GPA: 3.86; rank: 13/143. Major-course scores include Data Mining (100), Algorithm Design and Analysis (94), Software Engineering (95), and Pattern Recognition (93)."
+    },
+    {
+      "title": "Beihang University · Computer Science and Technology",
+      "period": "Sep 2017–Jun 2021",
+      "text": "Undergraduate studies. GPA: 3.67/4.00; major-course scores include Mathematical Analysis (100), Software Engineering (98), and Deep Learning (94)."
+    }
+  ],
+  "research": [
+    {
+      "id": "expath",
+      "title": "eXpath · Explaining knowledge graph link prediction",
+      "period": "2024.01–2025.01",
+      "status": "PVLDB / VLDB 2025 · First author · Accepted",
+      "summary": "Combines ontological closed-path rules and relational paths to explain link predictions. Two explanation-quality metrics improve by approximately 20%, with 61.4% less explanation time.",
+      "details": [
+        "Develops structured explanations for embedding-based link prediction by combining relational paths with ontological closed-path rules.",
+        "Independently carried out problem formulation, method design, implementation, experiments, analysis, and writing, including rule mining and path search.",
+        "On the paper’s benchmarks, improves two explanation-quality metrics by approximately 20% and reduces explanation time by 61.4% against the best comparison methods."
+      ],
+      "links": {
+        "Code": "https://github.com/cs-anonymous/eXpath"
+      }
+    },
+    {
+      "id": "ruledep",
+      "title": "RuleDep · Dependency-aware rule aggregation",
+      "period": "2025.08–2026.06",
+      "status": "ICDE 2027 · First author · Accepted",
+      "summary": "Models complementarity and redundancy among rules using sparse second-order corrections and two-stage training. Average MRR improves by about 3.7% over LR-Agg across seven datasets.",
+      "details": [
+        "Models dependencies among jointly triggered rules through signed gains in log-failure evidence space, distinguishing complementary from redundant evidence.",
+        "Independently developed the method, implementation, and experiments. Implemented the core in Kotlin/JVM, using CPU multithreading and atomic operations for shared state.",
+        "RuleDep-ens raises average MRR from 0.382 to 0.396 across seven datasets, with 21 best or tied-best metrics among interpretable methods."
+      ],
+      "links": {
+        "Code": "https://github.com/cs-anonymous/RuleDep"
+      }
+    },
+    {
+      "id": "geneticprism",
+      "title": "GeneticPrism · Hierarchical graph design and layout",
+      "period": "2023.09–2024.08",
+      "status": "IEEE TVCG · First author · Accepted",
+      "summary": "Designs multifaceted scholarly evolution graphs and the IFHL layout to jointly organize within-topic citations and cross-topic influence, evaluated through cases and a 20-participant user study.",
+      "details": [
+        "Designs the GeneticPrism overview and GeneticScroll detail views for overlapping topics, temporal evolution, and cross-topic influence.",
+        "Develops Integrated Flow Hierarchical Layout (IFHL), combining internal citations and cross-topic flows through proxy nodes, weighted crossing optimization, and edge bundling.",
+        "Independently completed research design, algorithms, experiments, and writing. Three cases and a 20-participant study evaluate the approach; all seven questionnaire dimensions report p < .001 for subjective usability and perceived effectiveness."
+      ],
+      "links": {
+        "Code": "https://github.com/visdata/GeneticPrism",
+        "Live system": "https://genetic-flow.com/"
+      }
+    },
+    {
+      "id": "inspire",
+      "title": "INSPIRE · Expressive Piano Performance Generation",
+      "period": "2026.04–2026.08",
+      "status": "AAAI 2027 submission · First author",
+      "summary": "Develops note-level representations, score-relative timing models, and continuous distribution prediction for expressive piano performance, covering data processing, modeling, training, and evaluation.",
+      "details": [
+        "Fuses note attributes into a single Transformer timestep with typed encoding and score-relative timing deviations.",
+        "Implements custom model components and training logic with PyTorch and Transformers, spanning preprocessing, training, inference, and multi-level distributional evaluation.",
+        "On ASAP, CINR-bounded reduces PP Human-Relative Wasserstein by 15.2% against Pianist Transformer; inference cost for the reported test task decreases from 126.4 to 6.0 GPU-minutes."
+      ],
+      "links": {}
+    },
+    {
+      "id": "cueir",
+      "title": "CueIR · Long-term agent memory",
+      "period": "2026.08–Present",
+      "status": "Ongoing research",
+      "summary": "Studies traceable memory organization and retrieval. Memory-graph construction and agent tools are operational, with evaluation on the LoCoMo and MemoryAgentBench datasets.",
+      "details": [],
+      "links": {}
+    }
+  ],
+  "experience": [
+    {
+      "id": "materagent",
+      "title": "MaterAgent · Agent Harness for materials R&D",
+      "period": "Ongoing",
+      "org": "Research-group industry collaboration · MaterBrain",
+      "summary": "Works on Agent Harness architecture and supporting tools for end-to-end materials research and development.",
+      "details": [
+        "Participates in the research group’s collaboration with MaterBrain, developing agent execution infrastructure and tools for materials R&D workflows. Designed and developed a Paper Browser MCP tool for automated materials-literature retrieval, reducing researchers’ literature-review time and improving information access."
+      ]
+    },
+    {
+      "id": "classification",
+      "title": "Research-agent-based data classification",
+      "period": "2024.12–2025.05",
+      "org": "Research-group collaborative project",
+      "summary": "Developed LLM entity-extraction tools and a RAG-based data classification pipeline for sensitive-data annotation and refinement.",
+      "details": [
+        "Contributed to the research-agent platform by integrating entity extraction, retrieval-augmented generation, and data classification. The team was named one of Beihang University’s Top Ten Outstanding Teams in Artificial Intelligence."
+      ]
+    },
+    {
+      "id": "geneticflow",
+      "title": "GeneticFlow · Scholarly visual analytics system",
+      "period": "Since Sep 2023",
+      "org": "Independent development and maintenance · GeneticPrism system",
+      "summary": "Independently developed and maintained the front end, back end, and visualization components using JavaScript, D3, Graphviz/WebAssembly, Flask, and MySQL.",
+      "details": [
+        "Compiled Graphviz C++ sources into browser-based layout components, integrating graph layout with interactive visualization and maintaining the full stack.",
+        "Platform counters: 102,129 User and 507,827 visits, as of Sep 15, 2026; these are platform-wide figures. The system has served 102,129 users worldwide and supported 507,827 visits, and has received software-copyright registration."
+      ]
+    },
+    {
+      "id": "sensetime-aigc",
+      "title": "SenseTime · AI image-generation back end",
+      "period": "2023.02–2023.08",
+      "org": "Internship · Miaohua",
+      "summary": "Contributed to the Miaohua back end and independently developed a Discord bot deployed to SenseTime’s official Discord server, with over 1,000 server members.",
+      "details": []
+    },
+    {
+      "id": "sensetime-tools",
+      "title": "SenseTime · Model toolchain development",
+      "period": "2021.06–2022.08",
+      "org": "Internship",
+      "summary": "Independently developed spring.remote for cluster login and job submission management; received an Outstanding Intern award.",
+      "details": []
+    },
+    {
+      "id": "materials",
+      "title": "Rare-earth catalysis database and digital R&D platform",
+      "period": "Sep 2021–Aug 2024 · National Key R&D Program subproject",
+      "org": "Beihang University · Project 2021YFB3500700, Subproject 1",
+      "summary": "Developed materials knowledge graphs, ontologies, and visualization modules for heterogeneous materials data and knowledge discovery.",
+      "details": [
+        "Participated as a subproject assistant and team lead, integrating heterogeneous materials data to support synthesis-condition recommendations and knowledge discovery. Led database and materials knowledge-graph construction from project proposal through acceptance; designed a 10^5-scale multimodal materials database and supported synthesis-condition recommendation and knowledge discovery."
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "label": "Programming languages",
+      "text": "Proficient in Python, Java, and C/C++, with at least 10,000 lines of code written in each; familiar with Kotlin/JVM."
+    },
+    {
+      "label": "Machine learning",
+      "text": "Familiar with machine-learning principles and PyTorch, scikit-learn, and Transformers; scored above 90 in machine learning, data mining, deep learning, and related courses."
+    },
+    {
+      "label": "Systems and back-end development",
+      "text": "Familiar with Linux administration, shell scripting, and Docker; development experience with Flask, Django, MySQL, and PostgreSQL."
+    },
+    {
+      "label": "Front-end and visualization",
+      "text": "Familiar with JavaScript, HTML, CSS, D3, and Vue; completed computer graphics coursework, served as a visualization course teaching assistant, and contributed substantially to visualization work accepted at a CCF-A venue."
+    },
+    {
+      "label": "English and certification",
+      "text": "TOEFL 105; GRE 327; ranked in the top 8.79% in the CCF CSP certification."
+    }
+  ],
+  "visit": {
+    "title": "Technical University of Munich · Research visit",
+    "period": "Sep–Dec 2025",
+    "text": "Worked with Prof. Stephen Kobourov on knowledge graph visualization and graph drawing; subsequently collaborated with Maribel Acosta on rule-based reasoning."
+  },
+  "awards": [
+    "Beihang University First-Class Graduate Scholarship · 2021, 2023, 2025, 2026",
+    "ACT Laboratory Academic Contribution Award · 2026",
+    "Beihang University Top Ten Outstanding Teams in Artificial Intelligence · 2025",
+    "Outstanding Intern · Aug 2022",
+    "Beihang University Mathematical Modeling Competition, First Prize · 2021: In a three-person team, developed a truck blind-spot monitoring and warning solution covering static and dynamic blind-spot analysis, camera placement optimization, YOLO object detection, and visual feedback.",
+    "30th Fengru Cup Science and Technology Competition, Third Prize · 2020: Led a three-person team in developing MusiConvertor, an end-to-end system integrating instrument-track separation from noisy mixed music, digital audio recognition, and sheet-music conversion.",
+    "SenseTime Outstanding Intern · Model toolchain internship",
+    "Beihang University Mathematical Modeling Competition, First Prize · Jul 2019"
+  ],
+  "publications": [
+    {
+      "title": "RuleDep: Modeling Complementarity and Redundancy in Rule Aggregation for KGC",
+      "authors": "Ye Sun, Maribel Acosta, Lei Shi, Yongxin Tong",
+      "venue": "ICDE 2027 · Accepted",
+      "role": "First author",
+      "url": "https://github.com/cs-anonymous/RuleDep"
+    },
+    {
+      "title": "eXpath: Explaining Knowledge Graph Link Prediction with Ontological Closed Path Rules",
+      "authors": "Ye Sun, Lei Shi, Yongxin Tong",
+      "venue": "PVLDB / VLDB 2025 · Accepted",
+      "role": "First author",
+      "url": "https://github.com/cs-anonymous/eXpath"
+    },
+    {
+      "title": "GeneticPrism: Multifaceted Visualization of Citation-based Scholarly Research Evolution",
+      "authors": "Ye Sun, Zipeng Liu, Yuankai Luo, Lei Xia, Lei Shi",
+      "venue": "IEEE TVCG · Accepted",
+      "role": "First author",
+      "url": "https://github.com/visdata/GeneticPrism"
+    },
+    {
+      "title": "INSPIRE: Integrated Note-based Score Performance Interpretation, Rendering and Expression",
+      "authors": "Ye Sun (first author)",
+      "venue": "AAAI 2027 · Under review",
+      "role": "First author",
+      "url": ""
+    },
+    {
+      "title": "“It’s the model, folks.” An Extra Summative Evaluation Factor for Visual Analytics",
+      "authors": "",
+      "venue": "IEEE VIS 2026 · Accepted",
+      "role": "Fourth author",
+      "url": ""
+    },
+    {
+      "title": "LLM-Based High-Performance Material Synthesis Route Extraction using Human-AI-Curated Few-Shot Demonstrations",
+      "authors": "",
+      "venue": "JACS 2025 · Accepted",
+      "role": "Ninth author of 18",
+      "url": ""
+    },
+    {
+      "title": "How “Applied” is Fifteen Years of VAST Conference?",
+      "authors": "Lei Shi, Lei Xia, Zipeng Liu, Ye Sun, Huijie Guo, Klaus Mueller",
+      "venue": "IEEE VIS 2023 · Accepted",
+      "role": "Fourth author",
+      "url": ""
+    },
+    {
+      "title": "RankFIRST: Visual Analysis for Factor Investment by Ranking Stock Timeseries",
+      "authors": "",
+      "venue": "IEEE TVCG 2022 · Accepted",
+      "role": "Fourth author",
+      "url": ""
+    },
+    {
+      "title": "Rare-earth materials knowledge graph based on multi-source heterogeneous data (translated title)",
+      "authors": "",
+      "venue": "HHME 2022 · Accepted",
+      "role": "First author",
+      "url": ""
+    }
+  ],
+  "personal": [
+    ["Location", "Beijing, China"],
+    ["Affiliation", "School of Computer Science and Engineering, Beihang University"],
+    ["Program", "PhD in Software Engineering · integrated master’s–PhD track"],
+    ["Advisor", "Prof. Lei Shi"],
+    ["Expected graduation", "June 2027"],
+    ["University email", "sunie@buaa.edu.cn"]
+  ],
+  "contact": {
+    "phone": "13872530255",
+    "wechat": "13872530255",
+    "university_email": "sunie@buaa.edu.cn"
+  },
+  "supervisors": [
+    {
+      "role": "导师",
+      "name": "时磊",
+      "name_en": "Lei Shi",
+      "url": "https://leishidata.com/"
+    },
+    {
+      "role": "副导师",
+      "name": "童咏昕",
+      "name_en": "Yongxin Tong",
+      "url": "https://scholar.google.com/citations?user=aeCHfDIAAAAJ&hl=en"
+    }
+  ],
+  "scholar_url": "https://scholar.google.com/citations?user=nGW0RhoAAAAJ",
+  "bilibili_url": "https://space.bilibili.com/173872440"
+}

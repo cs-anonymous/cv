@@ -1,34 +1,30 @@
 ---
-layout: about
-title: about
+layout: page
+title: "孙烨 · Ye Sun"
 permalink: /
-subtitle: <a href='#'>Affiliations</a>. Address. Contacts. Motto. Etc.
-
-profile:
-  align: right
-  image: prof_pic.jpg
-  image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>555 your office number</p>
-    <p>123 your address street</p>
-    <p>Your City, State 12345</p>
-
-selected_papers: true # includes a list of papers marked as "selected={true}"
-social: true # includes social icons at the bottom of the page
-
-announcements:
-  enabled: true # includes a list of news items
-  scrollable: true # adds a vertical scroll bar if there are more than 3 news items
-  limit: 5 # leave blank to include all the news in the `_news` folder
-
-latest_posts:
-  enabled: true
-  scrollable: true # adds a vertical scroll bar if there are more than 3 new posts items
-  limit: 3 # leave blank to include all the blog posts
+lang: zh-CN
+alternate_url: /en/
+nav_label: "简历"
+nav: true
+nav_order: 0
 ---
 
-Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](https://www.reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
-
-Put your address / P.O. box / other info right below your picture. You can also disable any of these elements by editing `profile` property of the YAML header of your `_pages/about.md`. Edit `_bibliography/papers.bib` and Jekyll will render your [publications page](/al-folio/publications/) automatically.
-
-Link to your social media connections, too. This theme is set up to use [Font Awesome icons](https://fontawesome.com/) and [Academicons](https://jpswalsh.github.io/academicons/), like the ones below. Add your Facebook, Twitter, LinkedIn, Google Scholar, or just disable all of them.
+<link rel="stylesheet" href="{{ '/assets/css/profile.css' | relative_url }}">
+<div class="profile-content">
+<div class="personal-intro"><img class="portrait" src="{{ '/assets/img/ye-sun.jpg' | relative_url }}" width="124" height="180" alt="孙烨" decoding="async"><div><p class="intro">北京航空航天大学计算机学院软件工程博士研究生（硕博连读），预计于 2027 年 6 月毕业。研究方向为知识图谱推理、可视分析与智能体记忆。</p><p class="supervisors">导师：<a href="https://leishidata.com/">时磊</a> · 副导师：<a href="https://scholar.google.com/citations?user=aeCHfDIAAAAJ&amp;hl=en">童咏昕</a></p><p class="meta">北京，中国 · 2027 年 6 月</p><dl class="contact-grid"><div><dt>微信／手机</dt><dd><a href="tel:13872530255">13872530255</a></dd></div><div><dt>邮箱</dt><dd><a href="mailto:cs.yesun@gmail.com">cs.yesun@gmail.com</a></dd></div><div><dt>学校邮箱</dt><dd><a href="mailto:sunie@buaa.edu.cn">sunie@buaa.edu.cn</a></dd></div></dl></div></div><nav class="toc" aria-label="履历目录"><a href="#education">教育经历</a><a href="#research">研究经历</a><a href="#engineering">工程实践</a><a href="#skills">技术与语言</a><a href="#publications">论文列表</a></nav><h2 id="education">教育经历</h2><section class="entry"><h3>北京航空航天大学 · 软件工程</h3><div class="meta">2023.09–至今</div><p>博士研究生（硕博连读），预计 2027.06 毕业；GPA 3.87。研究方向：知识图谱推理、可视分析、智能体记忆，相关研究成果已发表于多篇CCF-A类论文。</p></section>
+<section class="entry"><h3>北京航空航天大学 · 计算机科学与技术</h3><div class="meta">2021.09–2023.06</div><p>硕士阶段（硕博连读），GPA 3.86。 硕士阶段排名 13/143。专业成绩：GPA: 3.87/4.00；专业排名：13/143；主修课程：数据挖掘（100）、算法设计与分析（94）、软件工程（95）、模式识别（93）。</p></section>
+<section class="entry"><h3>北京航空航天大学 · 计算机科学与技术</h3><div class="meta">2017.09–2021.06</div><p>本科。专业成绩：GPA: 3.67/4.00；主修课程：数学分析（100）、软件工程（98），深度学习（94）。</p></section>
+<h2 id="research">研究经历</h2><section class="entry" id="expath"><h3>eXpath · 知识图谱链接预测解释</h3><div class="meta">2024.01–2025.01 · PVLDB / VLDB 2025 · 第一作者 · 已录用</div><ul class="project-points"><li><strong>项目描述：</strong> 融合本体闭环规则与关系路径证据，设计规则挖掘和路径搜索算法；两个解释质量指标约提升 20%，解释耗时减少 61.4%。</li><li><strong>主要贡献：</strong> 针对嵌入式链接预测缺乏可理解语义证据的问题，将关系路径与本体闭环规则结合，生成结构化解释；独立完成问题提出、方法设计、实现、实验分析与论文撰写；将规则挖掘和路径搜索落地为可评测的解释框架；在论文基准实验中，相比最佳对比方法，两个解释质量指标约提升 20%、解释耗时减少 61.4%；这些数字衡量解释质量与效率。</li></ul><div class="entry-links"><a href="https://github.com/cs-anonymous/eXpath">代码 ↗</a></div></section>
+<section class="entry" id="ruledep"><h3>RuleDep · 依赖感知的规则聚合</h3><div class="meta">2025.08–2026.06 · ICDE 2027 · 第一作者 · 已录用</div><ul class="project-points"><li><strong>项目描述：</strong> 显式建模规则之间的互补与冗余，以稀疏二阶修正和两阶段训练改进聚合；七数据集平均 MRR 相比 LR-Agg 提升约 3.7%。</li><li><strong>主要贡献：</strong> 研究共同触发规则的依赖关系，在 log-failure evidence 空间引入带符号增益，区分互补证据与冗余证据；独立完成方法、算法实现与实验；以 Kotlin/JVM 编写核心实现，结合 CPU 多线程和原子操作管理共享状态；RuleDep-ens 的七数据集平均 MRR 从 0.382 提升至 0.396；在可解释方法比较中，21 项指标最佳或并列最佳。</li></ul><div class="entry-links"><a href="https://github.com/cs-anonymous/RuleDep">代码 ↗</a></div></section>
+<section class="entry" id="geneticprism"><h3>GeneticPrism · 层次图设计与布局算法</h3><div class="meta">2023.09–2024.08 · IEEE TVCG · 第一作者 · 已录用</div><ul class="project-points"><li><strong>项目描述：</strong> 提出多主题研究演化的层次图表示与 IFHL 布局，联合组织主题内引用和跨主题影响；通过案例分析与 20 人用户研究评估。</li><li><strong>主要贡献：</strong> 设计 GeneticPrism 总览与 GeneticScroll 局部视图，支持主题重叠、时间演化及跨主题影响的多尺度分析；设计 Integrated Flow Hierarchical Layout（IFHL），将主题内部引用与跨主题流入／流出共同纳入分层布局，结合代理节点、加权交叉优化与边捆绑；独立完成研究设计、算法实现、实验和写作；采用三个案例及 20 人用户研究评估。问卷七个维度均报告 p &lt; .001，反映主观可用性与感知有效性。</li></ul><div class="entry-links"><a href="https://github.com/visdata/GeneticPrism">代码 ↗</a><a href="https://genetic-flow.com/">在线系统 ↗</a></div></section>
+<section class="entry" id="inspire"><h3>INSPIRE · 表现力钢琴演奏生成</h3><div class="meta">2026.04–2026.08 · AAAI 2027 在投 · 第一作者</div><ul class="project-points"><li><strong>项目描述：</strong> 以音符级结构化表示、谱面相对时序建模和连续分布预测实现演奏生成，独立完成数据处理、模型、训练与评估。</li><li><strong>主要贡献：</strong> 将音符属性融合为单个 Transformer 时间步，以类型化编码和谱面相对时序偏差建模表现力控制；基于 PyTorch 与 Transformers 实现自定义模型组件和训练逻辑，贯通预处理、训练、推理及多粒度分布评估；ASAP 测试中，CINR-bounded 的 PP Human-Relative Wasserstein 相比 Pianist Transformer 下降 15.2%；指定测试任务推理成本由 126.4 降为 6.0 GPU-minutes。</li></ul></section>
+<section class="entry" id="cueir"><h3>CueIR · Agent 长期记忆</h3><div class="meta">2026.08–至今 · 在研</div><ul class="project-points"><li><strong>项目描述：</strong> 研究可追溯的记忆组织与检索，已跑通记忆图构建及智能体工具，并在 LoCoMo 与 MemoryAgentBench 数据集上开展实验验证。</li></ul></section>
+<h2 id="engineering">工程实践与企业合作</h2><section class="entry" id="materagent"><h3>MaterAgent · 面向材料研发全流程的 Agent Harness</h3><div class="meta">进行中 · 导师组企业合作 · 新材智脑 / MaterBrain</div><ul class="project-points"><li><strong>项目描述：</strong> 面向材料研发全流程开展 Agent Harness 架构与配套工具开发。</li><li><strong>主要贡献：</strong> 参与导师组与新材智脑（MaterBrain）的合作研发，将智能体运行支撑框架与工具开发用于材料研发流程。设计并开发 Paper Browser MCP 工具，实现材料领域学术文献的自动化检索，有效降低研究人员文献调研的时间成本，提升信息获取效率。</li></ul></section>
+<section class="entry" id="classification"><h3>基于深度科研智能体的数据分类分级</h3><div class="meta">2024.12–2025.05 · 导师组合作项目</div><ul class="project-points"><li><strong>项目描述：</strong> 开发 LLM 实体识别工具，构建 RAG 驱动的数据分类分级流程，支持敏感数据自动标注与调优。</li><li><strong>主要贡献：</strong> 参与科研智能体平台建设，将实体识别、检索增强生成与分类分级流程结合。团队获评北京航空航天大学人工智能领域十大优秀团队称号。</li></ul></section>
+<section class="entry" id="geneticflow"><h3>GeneticFlow · 学术可视分析系统</h3><div class="meta">2023.09 起 · 独立开发与维护 · GeneticPrism 工程实践</div><ul class="project-points"><li><strong>项目描述：</strong> 独立开发前后端及可视化组件，集成 JavaScript、D3、Graphviz / WebAssembly、Flask 与 MySQL。</li><li><strong>主要贡献：</strong> 从 Graphviz C++ 源码编译浏览器布局组件，连接图布局计算与可视交互；独立维护前端、后端和数据库；平台计数为 102,129 User、507,827 visits（2026.09.15 快照）；该数据为平台整体统计。系统上线后累计服务全球102,129名用户，支撑507,827次访问，并获得软件著作权登记。</li></ul></section>
+<section class="entry" id="sensetime-aigc"><h3>商汤科技 · AI 图片生成后端开发</h3><div class="meta">2023.02–2023.08 · 实习 · 秒画</div><ul class="project-points"><li><strong>项目描述：</strong> 参与秒画后端开发，独立开发 Discord Bot 并上线商汤官方 Discord，所在服务器有上千名用户。</li></ul></section>
+<section class="entry" id="sensetime-tools"><h3>商汤科技 · 模型工具链研发</h3><div class="meta">2021.06–2022.08 · 实习</div><ul class="project-points"><li><strong>项目描述：</strong> 独立开发 spring.remote 工具，支持集群登录及任务提交管理；获优秀实习生荣誉。</li></ul></section>
+<section class="entry" id="materials"><h3>稀土催化材料数据库与数字化研发平台</h3><div class="meta">2021.09–2024.08 · 国家重点研发计划课题 · 北航 · 项目 2021YFB3500700 课题一</div><ul class="project-points"><li><strong>项目描述：</strong> 参与材料数据库建设，负责多源材料知识图谱、本体设计与可视化模块，支持材料数据组织与知识发现。</li><li><strong>主要贡献：</strong> 作为课题助理及组长参与研发流程；整合材料多源异构数据，支持合成条件推荐及知识发现。主导数据库与材料知识图谱构建，全程参与项目从申报到验收的完整落地，确保各阶段交付物按期通过评审。设计并构建规模达10^5级别的多模态材料数据库，整合多源异构数据，为合成条件推荐与知识发现功能提供底层数据支撑。基于知识图谱实现合成条件推荐与知识发现功能，有效支撑材料智能化研发流程。</li></ul></section>
+<h2 id="skills">技术与语言</h2><dl class="skills-list"><div><dt>编程语言</dt><dd>掌握 Python、Java、C/C++，各语言累计代码量均不少于一万行；熟悉 Kotlin/JVM。</dd></div><div><dt>机器学习</dt><dd>熟悉机器学习原理及 PyTorch、scikit-learn、Transformers；机器学习、数据挖掘、深度学习等课程成绩均在 90 分以上。</dd></div><div><dt>系统与后端</dt><dd>熟悉 Linux 运维、Shell 编程及 Docker；具备 Flask、Django、MySQL、PostgreSQL 开发经验。</dd></div><div><dt>前端与可视化</dt><dd>熟悉 JavaScript、HTML、CSS、D3、Vue；修读计算机图形学，担任可视化课程助教，主要参与的可视化项目已被 CCF-A 类会议录用。</dd></div><div><dt>英语与认证</dt><dd>TOEFL 105，GRE 327；CCF CSP 认证排名前 8.79%。</dd></div></dl><h2>学术交流</h2><section class="entry"><h3>慕尼黑工业大学 · 科研访学</h3><div class="meta">2025.09–2025.12</div><p>与 Stephen Kobourov 教授开展知识图谱可视化与图绘制研究；后续与 Maribel Acosta 合作开展规则推理研究。</p></section>
+<h2 id="publications">论文列表</h2><section class="entry"><div class="pub-title"><a href="https://github.com/cs-anonymous/RuleDep">RuleDep: Modeling Complementarity and Redundancy in Rule Aggregation for KGC</a></div><div class="pub-authors">Ye Sun, Maribel Acosta, Lei Shi, Yongxin Tong</div><div class="meta">ICDE 2027 · 已录用 · 第一作者</div></section><section class="entry"><div class="pub-title"><a href="https://github.com/cs-anonymous/eXpath">eXpath: Explaining Knowledge Graph Link Prediction with Ontological Closed Path Rules</a></div><div class="pub-authors">Ye Sun, Lei Shi, Yongxin Tong</div><div class="meta">PVLDB / VLDB 2025 · 已录用 · 第一作者</div></section><section class="entry"><div class="pub-title"><a href="https://github.com/visdata/GeneticPrism">GeneticPrism: Multifaceted Visualization of Citation-based Scholarly Research Evolution</a></div><div class="pub-authors">Ye Sun, Zipeng Liu, Yuankai Luo, Lei Xia, Lei Shi</div><div class="meta">IEEE TVCG · 已录用 · 第一作者</div></section><section class="entry"><div class="pub-title">INSPIRE: Integrated Note-based Score Performance Interpretation, Rendering and Expression</div><div class="pub-authors">Ye Sun（第一作者）</div><div class="meta">AAAI 2027 · 在投 · 第一作者</div></section><section class="entry"><div class="pub-title">“It’s the model, folks.” An Extra Summative Evaluation Factor for Visual Analytics</div><div class="meta">IEEE VIS 2026 · 已录用 · 第四作者</div></section><section class="entry"><div class="pub-title">LLM-Based High-Performance Material Synthesis Route Extraction using Human-AI-Curated Few-Shot Demonstrations</div><div class="meta">JACS 2025 · 已录用 · 第九作者（共 18 位）</div></section><section class="entry"><div class="pub-title">How “Applied” is Fifteen Years of VAST Conference?</div><div class="pub-authors">Lei Shi, Lei Xia, Zipeng Liu, Ye Sun, Huijie Guo, Klaus Mueller</div><div class="meta">IEEE VIS 2023 · 已录用 · 第四作者</div></section><section class="entry"><div class="pub-title">RankFIRST: Visual Analysis for Factor Investment by Ranking Stock Timeseries</div><div class="meta">IEEE TVCG 2022 · 已录用 · 第四作者</div></section><section class="entry"><div class="pub-title">基于多源异构数据的稀土材料知识图谱</div><div class="meta">HHME 2022 · 已录用 · 第一作者</div></section><h2>荣誉奖励</h2><ul><li>北京航空航天大学研究生一等奖学金 · 2021、2023、2025、2026</li><li>ACT 实验室学术贡献奖 · 2026</li><li>北京航空航天大学人工智能领域十大优秀团队 · 2025</li><li>优秀实习生 · 2022.8</li><li>北京航空航天大学数学建模竞赛一等奖 · 2021：三人团队面向卡车盲区智能监控预警，完成静态与动态盲区分析、摄像头位置优化、YOLO 目标检测及可视化反馈。</li><li>第 30 届冯如杯科技竞赛三等奖 · 2020：带领三人团队开发 MusiConvertor 音轨分离与乐谱识别系统，将含噪混合音乐的音轨分离、数字音频识别与乐谱转换集成为端到端系统。</li><li>商汤优秀实习生 · 模型工具链实习期间</li><li>北航数学建模竞赛一等奖 · 2019.7</li></ul>
+</div>

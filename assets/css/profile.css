@@ -1,0 +1,232 @@
+/* Site-specific content styles; al-folio owns layout and navigation. */
+.profile-content {
+  font-family:
+    system-ui,
+    -apple-system,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+  line-height: 1.65;
+  font-size: 1rem;
+}
+.profile-content .intro {
+  font-size: 1rem;
+  max-width: 60rem;
+}
+.profile-content h2 {
+  margin-top: 1.4rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid var(--global-divider-color, #ddd);
+}
+.profile-content h2[id] {
+  scroll-margin-top: 5rem;
+}
+.profile-content .entry {
+  padding: 0.65rem 0;
+  border-bottom: 1px solid var(--global-divider-color, #ddd);
+}
+.profile-content .entry h3 {
+  font-size: 1.16rem;
+  line-height: 1.5;
+  margin: 0 0 0.35rem;
+  font-weight: 600;
+}
+.profile-content .meta {
+  font-size: 0.9rem;
+  color: var(--global-text-color-light, #666);
+  margin-bottom: 0.25rem;
+}
+.profile-content .entry p {
+  margin-bottom: 0.3rem;
+}
+.profile-content .actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 0.8rem 0 1.2rem;
+}
+.profile-content .actions a {
+  border: 1px solid var(--global-theme-color, #b509ac);
+  border-radius: 4px;
+  padding: 0.35rem 0.85rem;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+.profile-content .actions a.primary {
+  background: var(--global-theme-color, #b509ac);
+  color: white;
+}
+.profile-content .entry-links {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.9rem;
+}
+.profile-content a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 4px;
+}
+.profile-content .toc {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.95rem;
+}
+.profile-content .pub-title {
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+.profile-content .pub-authors {
+  font-size: 0.95rem;
+}
+.profile-content .skills-list {
+  margin: 0;
+}
+.profile-content .skills-list > div {
+  display: grid;
+  grid-template-columns: minmax(10rem, 0.28fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--global-divider-color, #ddd);
+}
+.profile-content .skills-list dt {
+  font-weight: 600;
+}
+.profile-content .skills-list dd {
+  margin: 0;
+}
+@media (max-width: 600px) {
+  .profile-content {
+    font-size: 1rem;
+  }
+  .profile-content .entry h3 {
+    font-size: 1.08rem;
+  }
+  .profile-content .actions {
+    gap: 0.5rem;
+  }
+  .profile-content h2 {
+    font-size: 1.45rem;
+  }
+  .profile-content .skills-list > div {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+}
+@media print {
+  .profile-content .actions,
+  .profile-content .toc {
+    display: none;
+  }
+  .profile-content .entry {
+    break-inside: avoid;
+  }
+}
+
+/* System typography and small native symbols avoid network font dependencies. */
+body,
+h1,
+h2,
+h3,
+h4,
+.navbar {
+  font-family:
+    system-ui,
+    -apple-system,
+    "PingFang SC",
+    "Microsoft YaHei",
+    sans-serif;
+}
+.post-header {
+  margin-bottom: 1rem;
+}
+.post-header .post-title {
+  font-size: 2rem;
+  line-height: 1.25;
+  margin-bottom: 0.35rem;
+}
+.post-header .post-description:empty {
+  display: none;
+}
+.profile-content ul {
+  margin-top: 0.35rem;
+  margin-bottom: 0.4rem;
+  padding-left: 1.3rem;
+}
+.profile-content h2 {
+  font-size: 1.4rem;
+}
+#light-toggle-system::before {
+  content: "◐";
+}
+#light-toggle-dark::before {
+  content: "☾";
+}
+#light-toggle-light::before {
+  content: "☀";
+}
+#light-toggle i {
+  font: normal 1.25rem/1 system-ui;
+}
+.personal-intro {
+  display: grid;
+  grid-template-columns: 124px minmax(0, 1fr);
+  gap: 1.4rem;
+  align-items: start;
+}
+.portrait {
+  width: 124px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.2rem 1rem;
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+.contact-grid > div {
+  display: flex;
+  gap: 0.6rem;
+  min-width: 0;
+}
+.contact-grid dt {
+  font-weight: 500;
+  flex-shrink: 0;
+}
+.contact-grid dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+}
+.supervisors {
+  margin: 0.3rem 0;
+}
+.language-switch {
+  font-weight: 600;
+}
+@media (max-width: 700px) {
+  .personal-intro {
+    grid-template-columns: 90px minmax(0, 1fr);
+    gap: 1rem;
+  }
+  .portrait {
+    width: 90px;
+    height: 131px;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 440px) {
+  .personal-intro {
+    display: block;
+  }
+  .portrait {
+    float: right;
+    margin: 0 0 0.6rem 0.8rem;
+  }
+  .contact-grid {
+    clear: both;
+  }
+}
