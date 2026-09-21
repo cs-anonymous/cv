@@ -18,7 +18,7 @@ def entry(x, detailed=False):
     if detailed:
         out+=f'<ul class="project-points"><li>{esc(x.get("summary",x.get("text","")))}</li>'
         if x.get('details'):
-            out+=f'<li>{esc(" ".join(x["details"]))}</li>'
+            out+=''.join(f'<li>{esc(detail)}</li>' for detail in x['details'])
         out+='</ul>'
     else:
         out+=f'<p>{esc(x.get("summary",x.get("text","")))}</p>'
@@ -134,7 +134,7 @@ def pdfs():
         if detail:
             block.append(p('• '+x.get('summary',x.get('text',''))))
             if x.get('details'):
-                block.append(p('• '+' '.join(x['details'])))
+                block.extend(p('• '+detail) for detail in x['details'])
         else:
             block.append(p(x.get('summary',x.get('text',''))))
         if x.get('links'):
