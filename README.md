@@ -15,7 +15,7 @@
 
 ## 内容维护
 
-中文内容在 `_data/profile.json`，对应英文译稿在 `_data/profile.en.json`。更新事实时同步两个文件；相同条目保留同一 ID。研究和工程分别组织，不单列技能栏。
+中文内容在 `_data/profile.json`，对应英文译稿在 `_data/profile.en.json`。更新事实时同步两个文件；相同条目保留同一 ID。当前网页内容以 `../info/孙烨-算法工程师，研究员-博士在读.pdf` 为事实锚点；PDF 中每个独立段落在网页中保留为独立要点，不自行合并或扩写。
 
 ```sh
 python bin/build_profile.py --pages-only

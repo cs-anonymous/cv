@@ -11,11 +11,6 @@ def tr(s): return UI.get(s,s) if LANG=='en' else s
 def local(path): return "{{ '" + path + "' | relative_url }}"
 def route(path): return ('/en' + path) if LANG=='en' else path
 
-def combine_details(details):
-    separator='; ' if LANG=='en' else '；'
-    ending='.' if LANG=='en' else '。'
-    return separator.join(t.rstrip('。.!;；') for t in details)+ending
-
 def entry(x, detailed=False):
     meta=' · '.join(filter(None,[x.get('period'),x.get('status',x.get('org',''))]))
     ident=f' id="{esc(x["id"])}"' if x.get('id') else ''
@@ -24,7 +19,8 @@ def entry(x, detailed=False):
         description_label='Project Description:' if LANG=='en' else '项目描述：'
         contribution_label='Key Contributions:' if LANG=='en' else '主要贡献：'
         out+=f'<ul class="project-points"><li><strong>{description_label}</strong> {esc(x.get("summary",x.get("text","")))}</li>'
-        if x.get('details'): out+=f'<li><strong>{contribution_label}</strong> {esc(combine_details(x["details"]))}</li>'
+        if x.get('details'):
+            out+=''.join(f'<li><strong>{contribution_label}</strong> {esc(detail)}</li>' for detail in x['details'])
         out+='</ul>'
     else:
         out+=f'<p>{esc(x.get("summary",x.get("text","")))}</p>'
@@ -139,7 +135,7 @@ def pdfs():
         block=[p(x['title'],'h3'),p(' · '.join(filter(None,[x.get('period'),x.get('status',x.get('org',''))])),'small')]
         if detail:
             block.append(p('• 项目描述：'+x.get('summary',x.get('text',''))))
-            if x.get('details'): block.append(p('• 主要贡献：'+combine_details(x['details'])))
+            block.extend(p('• 主要贡献：'+detail) for detail in x.get('details', []))
         else:
             block.append(p(x.get('summary',x.get('text',''))))
         if x.get('links'):

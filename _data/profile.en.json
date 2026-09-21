@@ -24,7 +24,10 @@
       "period": "2024.01–2025.01",
       "status": "VLDB 2025, CCF-A · First author · Published",
       "summary": "Addresses the black-box nature of embedding-model decisions by independently proposing an explanation framework that combines ontological closed-path rules and relational-path evidence.",
-      "details": [],
+      "details": [
+        "Designs a structured explanation-generation mechanism that coordinates rule mining and path search, integrating ontological closed-path rules with relational-path evidence into a quantitatively evaluable framework.",
+        "On standard benchmarks, improves two explanation-quality metrics by approximately 20% and reduces explanation-generation time by 61.4% against the best comparison method, demonstrating gains in both explanation quality and computational efficiency."
+      ],
       "links": {
         "Code": "https://github.com/cs-anonymous/eXpath"
       }
@@ -34,8 +37,10 @@
       "title": "RuleDep · Dependency-aware rule aggregation",
       "period": "2025.08–2026.06",
       "status": "ICDE 2027, CCF-A · First author · Accepted",
-      "summary": "Leads the design of sparse second-order corrections and a two-stage training framework to model complementarity and redundancy in rule aggregation.",
-      "details": [],
+      "summary": "Leads the design of sparse second-order corrections and a two-stage training framework to model complementarity and redundancy in rule aggregation through dependencies among jointly triggered rules and signed gains in log-failure evidence space.",
+      "details": [
+        "Across seven datasets, raises average MRR from 0.382 to 0.396, achieves 21 best or tied-best metrics among interpretable methods, and improves MRR by approximately 10.7% on dependency-rich subsets."
+      ],
       "links": {
         "Code": "https://github.com/cs-anonymous/RuleDep"
       }
@@ -45,8 +50,10 @@
       "title": "GeneticPrism · Hierarchical graph layout and scholarly evolution visualization",
       "period": "2023.09–2024.08",
       "status": "TVCG 2025, CCF-A · First author · Published",
-      "summary": "Addresses the joint representation of within-topic citations and cross-topic influence in multi-topic scholarly evolution by proposing a hierarchical graph representation and IFHL layout.",
-      "details": [],
+      "summary": "Addresses the joint representation of within-topic citations and cross-topic influence in multi-topic scholarly evolution by proposing a hierarchical graph representation and IFHL (Integrated Flow Hierarchical Layout) layout.",
+      "details": [
+        "Leads the design of the GeneticPrism overview and GeneticScroll detail views for topic overlap, temporal evolution, and cross-topic influence, enabling linked multi-scale exploration and deeper analytical insight."
+      ],
       "links": {
         "Code": "https://github.com/visdata/GeneticPrism",
         "Live system": "https://genetic-flow.com/"
@@ -58,7 +65,10 @@
       "period": "2026.04–2026.06",
       "status": "AAAI 2027, CCF-A · First author · Under review",
       "summary": "Builds a note-level structured performance-generation framework that generates expressive performances from discrete symbols through relative-timing modeling and continuous distribution prediction.",
-      "details": [],
+      "details": [
+        "Designs typed encoding that fuses pitch, duration, dynamics, and other note attributes into a single Transformer timestep, with score-relative timing deviations for fine-grained expressive control.",
+        "On ASAP, reduces PP HR by 15.2% against PianistTransformer; architecture and inference-flow optimization reduces the reported test-task inference cost by 95.3%, improving deployability and iteration efficiency."
+      ],
       "links": {}
     },
     {
@@ -78,7 +88,10 @@
       "period": "Mar 2026–Present",
       "org": "Software development · MaterBrain",
       "summary": "Participates in Agent Harness architecture design for end-to-end materials R&D and builds the core framework supporting agent execution.",
-      "details": []
+      "details": [
+        "Designed and developed a Paper Browser MCP tool for automated retrieval and question answering over several thousand materials-science papers.",
+        "Participates in the advisor's industry-academic collaboration with MaterBrain, moving agent execution infrastructure and supporting tools into materials R&D workflows."
+      ]
     },
     {
       "id": "classification",
@@ -86,17 +99,17 @@
       "period": "2024.12–2025.05",
       "org": "Research-group collaborative project",
       "summary": "Developed LLM entity-extraction tools and a RAG-based data classification pipeline for sensitive-data annotation and refinement.",
-      "details": [
-        "Contributed to the research-agent platform by integrating entity extraction, retrieval-augmented generation, and data classification. The team was named one of Beihang University’s Top Ten Outstanding Teams in Artificial Intelligence."
-      ]
+      "details": []
     },
     {
       "id": "geneticflow",
       "title": "GeneticFlow V2.0 · Large-scale scholarly literature visualization system",
       "period": "Sep 2023–Present",
       "org": "Independent development and operations",
-      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction.",
-      "details": []
+      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction; the system has served 102,129 users, supported 507,827 visits, and received software copyright registration.",
+      "details": [
+        "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations."
+      ]
     },
     {
       "id": "sensetime-aigc",
@@ -104,15 +117,17 @@
       "period": "2023.02–2023.08",
       "org": "Miaohua",
       "summary": "Contributed deeply to the Miaohua AI-drawing system, designing and implementing back-end APIs for efficient and stable core drawing calls.",
-      "details": []
+      "details": [
+        "Led development of a Discord-based intelligent bot that connected efficiently to the AI-drawing core APIs and served over 1,000 users."
+      ]
     },
     {
       "id": "sensetime-tools",
       "title": "SenseTime · Model toolchain intern",
       "period": "2021.06–2022.08",
       "org": "",
-      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools. Received an Outstanding Intern award.",
-      "details": []
+      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools.",
+      "details": ["Received an Outstanding Intern award for performance on the project."]
     },
     {
       "id": "materials",
@@ -120,7 +135,10 @@
       "period": "Sep 2021–Aug 2024 · National Key R&D Program subproject",
       "org": "Subproject assistant",
       "summary": "Led construction of the database and materials knowledge graph, participating throughout the project from proposal to acceptance and ensuring scheduled delivery reviews.",
-      "details": []
+      "details": [
+        "Designed and built a multimodal materials database at the 10^5 scale by integrating heterogeneous data to support synthesis-condition recommendation and knowledge discovery.",
+        "Implemented synthesis-condition recommendation and knowledge-discovery functions based on the knowledge graph to support intelligent materials R&D workflows."
+      ]
     }
   ],
   "skills": [
@@ -155,10 +173,8 @@
     "ACT Laboratory Academic Contribution Award · 2026",
     "Beihang University Top Ten Outstanding Teams in Artificial Intelligence · 2025",
     "Outstanding Intern · Aug 2022",
-    "Beihang University Mathematical Modeling Competition, First Prize · 2021: In a three-person team, developed a truck blind-spot monitoring and warning solution covering static and dynamic blind-spot analysis, camera placement optimization, YOLO object detection, and visual feedback.",
     "30th Fengru Cup Science and Technology Competition, Third Prize · 2020: Led a three-person team in developing MusiConvertor, an end-to-end system integrating instrument-track separation from noisy mixed music, digital audio recognition, and sheet-music conversion.",
-    "SenseTime Outstanding Intern · Model toolchain internship",
-    "Beihang University Mathematical Modeling Competition, First Prize · Jul 2019"
+    "Beihang University Mathematical Modeling Competition, First Prize · Jul 2019: In a three-person team, designed a truck blind-spot monitoring and warning solution covering static and dynamic blind-spot analysis, camera placement optimization, YOLO object detection, and visual feedback."
   ],
   "publications": [
     {
