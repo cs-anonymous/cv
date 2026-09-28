@@ -63,8 +63,8 @@
       "id": "inspire",
       "title": "表现力钢琴演奏生成 INSPIRE (AAAI 2027, CCF-A)",
       "period": "2026.04–2026.06",
-      "status": "第一作者 · 在投",
-      "summary": "构建音符级结构化演奏生成框架，通过相对时序建模与连续分布预测，实现从离散符号到富有表现力演奏的生成。",
+      "status": "第一作者 · Revision（初审通过）",
+      "summary": "构建音符级结构化演奏生成框架，基于 PyTorch 与 Transformer（T5）进行监督微调（SFT），通过相对时序建模与连续分布预测实现从离散符号到富有表现力演奏的生成。",
       "details": [
         "设计类型化编码方案，将音高、时值、力度等多维音符属性融合为单一 Transformer 时间步输入，并引入谱面相对时序偏差建模，显著增强模型对演奏表现力的细粒度控制能力。",
         "在 ASAP 基准测试中，PP HR 指标较 PianistTransformer 降低 15.2%，验证了生成演奏在表现力分布上的显著优势。通过架构与推理流程优化，将指定测试任务的推理成本降低达 95.3%，大幅提升方案的可部署性与迭代效率。"
@@ -76,8 +76,11 @@
       "title": "CueIR · Agent 长期记忆",
       "period": "2026.08–至今",
       "status": "在研",
-      "summary": "研究可追溯的记忆组织与检索，已跑通记忆图构建及智能体工具，并在 LoCoMo 与 MemoryAgentBench 数据集上开展实验验证。",
-      "details": [],
+      "summary": "设计面向 Agent 的可追溯长期记忆系统，使用 Episode、Cue 与关系图组织跨会话信息，支持混合召回、图扩展和证据重建。",
+      "details": [
+        "实现记忆图构建、Agent 工具调用和按需证据重建，设计证据充分性判断、验证与 provenance 追踪机制。",
+        "在 LoCoMo 与 MemoryAgentBench 上开展准确召回、长期理解、选择性遗忘等实验评测。"
+      ],
       "links": {}
     }
   ],
@@ -87,8 +90,9 @@
       "title": "MaterAgent · 面向材料研发全流程的 Agent Harness",
       "period": "2026.03–至今",
       "org": "软件开发 · 新材智脑 / MaterBrain",
-      "summary": "参与材料研发全流程的 Agent Harness 架构设计，构建支撑智能体运行的核心框架。",
+      "summary": "通过 Agent 交互式理解 PI-Agent 框架与核心技术，梳理 agent loop、runtime、plugin 和智能体生命周期，参与材料研发全流程 Agent Harness 架构设计。",
       "details": [
+        "围绕材料研发设计 MCP 工具，编写工具 spec 文档，并通过 Agent 交互完成工具实现、联调与流程落地。",
         "设计并开发 Paper Browser MCP 工具，实现材料领域学术文献的自动化检索与问答，覆盖数千篇材料科研文献。",
         "参与导师与新材智脑的产学研合作项目，推动智能体运行支撑框架与配套工具在材料研发流程中的落地应用。"
       ]
@@ -197,7 +201,7 @@
     {
       "title": "INSPIRE: Integrated Note-based Score Performance Interpretation, Rendering and Expression",
       "authors": "Ye Sun（第一作者）",
-      "venue": "AAAI 2027 · 在投",
+      "venue": "AAAI 2027 · Revision（初审通过）",
       "role": "第一作者",
       "url": ""
     },
