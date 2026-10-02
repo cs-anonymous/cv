@@ -6,16 +6,20 @@ ROOT = Path(__file__).resolve().parents[1]
 D = json.loads((ROOT / '_data/profile.json').read_text())
 esc = html.escape
 LANG = 'zh-CN'
-UI = {'教育经历':'Education','研究经历':'Research','工程实践与企业合作':'Engineering & industry collaboration','工程实践':'Engineering','技术与语言':'Technical Skills & Languages','学术交流':'Research visit','荣誉奖励':'Honors & awards','论文列表':'Publications','详细履历':'Full CV','研究方法与实验详情 →':'Research methods and results →','下载简洁版 PDF':'Resume PDF (Chinese)','下载详细版 PDF':'Full CV PDF (Chinese)','阅读详细履历':'Read full CV','微信／手机':'WeChat / Phone','手机':'Phone','邮箱':'Email','学校邮箱':'University email','微信':'WeChat','导师':'Advisor','副导师':'Co-advisor'}
+UI = {'教育经历':'Education','研究经历':'Research','工程实践与企业合作':'Engineering & industry collaboration','工程实践':'Engineering','交流实习':'Internships & research visit','技术与语言':'Technical Skills & Languages','学术交流':'Research visit','荣誉奖励':'Honors & awards','论文列表':'Publications','详细履历':'Full CV','研究方法与实验详情 →':'Research methods and results →','下载简洁版 PDF':'Resume PDF (Chinese)','下载详细版 PDF':'Full CV PDF (Chinese)','阅读详细履历':'Read full CV','微信／手机':'WeChat / Phone','手机':'Phone','邮箱':'Email','学校邮箱':'University email','微信':'WeChat','导师':'Advisor','副导师':'Co-advisor'}
 def tr(s): return UI.get(s,s) if LANG=='en' else s
 def local(path): return "{{ '" + path + "' | relative_url }}"
 def route(path): return ('/en' + path) if LANG=='en' else path
 
-def entry(x, detailed=False):
+def entry(x, detailed=False, paragraph=False):
     meta=' · '.join(filter(None,[x.get('period'),x.get('status',x.get('org',''))]))
     ident=f' id="{esc(x["id"])}"' if x.get('id') else ''
     out=f'<section class="entry"{ident}><h3>{esc(x["title"])}</h3><div class="meta">{esc(meta)}</div>'
-    if detailed:
+    if paragraph:
+        separator='' if LANG == 'zh-CN' else ' '
+        text=separator.join(filter(None,[x.get('summary',x.get('text','')),*x.get('details',[])]))
+        out+=f'<p>{esc(text)}</p>'
+    elif detailed:
         out+=f'<ul class="project-points"><li>{esc(x.get("summary",x.get("text","")))}</li>'
         if x.get('details'):
             out+=''.join(f'<li>{esc(detail)}</li>' for detail in x['details'])
@@ -61,18 +65,22 @@ def page(name,title,path,content,nav=False,nav_label=None,nav_order=None):
 def pages_for_language():
     research_order={'geneticprism':0,'expath':1,'ruledep':2,'inspire':3,'cueir':4}
     experience_order={'materagent':0,'geneticflow':1,'classification':2,'materials':3,'sensetime-aigc':4,'sensetime-tools':5}
-    intro=personal();edu=''.join(entry(x) for x in D['education']);research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)));engineering=''.join(entry(x,True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)));awards='<ul>'+''.join('<li>'+esc(a)+'</li>' for a in D['awards'])+'</ul>'
+    intro=personal();edu=''.join(entry(x) for x in D['education']);research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)))
+    engineering_ids={'materagent','geneticflow','classification','materials'}
+    internship_ids={'sensetime-aigc','sensetime-tools'}
+    engineering=''.join(entry(x,paragraph=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in engineering_ids)
+    internships=''.join(entry(x,paragraph=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in internship_ids)
+    internships=entry(D['visit'])+internships
+    awards='<ul>'+''.join('<li>'+esc(a)+'</li>' for a in D['awards'])+'</ul>'
     def heading(s,ident=''): return f'<h2'+(f' id="{ident}"' if ident else '')+'>'+tr(s)+'</h2>'
     skills='<dl class="skills-list">'+''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd></div>' for x in D['skills'])+'</dl>'
-    toc='<nav class="toc" aria-label="'+('CV sections' if LANG=='en' else '履历目录')+'">'+''.join(f'<a href="#{i}">{tr(t)}</a>' for i,t in [('education','教育经历'),('research','研究经历'),('engineering','工程实践'),('skills','技术与语言'),('publications','论文列表')])+'</nav>'
-    short=intro+toc+heading('教育经历','education')+edu+heading('研究经历','research')+research
-    short+=heading('工程实践与企业合作','engineering')+engineering+heading('技术与语言','skills')+skills+heading('学术交流')+entry(D['visit'])+heading('论文列表','publications')+papers()+heading('荣誉奖励')+awards
-    page('about.md','Ye Sun · 孙烨' if LANG=='en' else '孙烨 · Ye Sun','/',short,nav=True,nav_label='Home' if LANG=='en' else '简历',nav_order=0)
+    toc='<nav class="toc" aria-label="'+('CV sections' if LANG=='en' else '履历目录')+'">'+''.join(f'<a href="#{i}">{tr(t)}</a>' for i,t in [('education','教育经历'),('research','研究经历'),('engineering','工程实践'),('internships','交流实习'),('skills','技术与语言'),('publications','论文列表')])+'</nav>'
     page('research.md',tr('研究经历'),'/research/',research)
     page('experience.md',tr('工程实践'),'/experience/',engineering)
     page('publications.md',tr('论文列表'),'/publications/',papers())
     detail=intro+toc
-    detail+=heading('教育经历','education')+edu+heading('研究经历','research')+research+heading('工程实践','engineering')+engineering+heading('技术与语言','skills')+skills+heading('学术交流')+entry(D['visit'])+heading('论文列表','publications')+papers()+heading('荣誉奖励')+awards
+    detail+=heading('教育经历','education')+edu+heading('研究经历','research')+research+heading('工程实践','engineering')+engineering+heading('交流实习','internships')+internships+heading('技术与语言','skills')+skills+heading('论文列表','publications')+papers()+heading('荣誉奖励')+awards
+    page('about.md','Ye Sun · 孙烨' if LANG=='en' else '孙烨 · Ye Sun','/',detail,nav=True,nav_label='Home' if LANG=='en' else '简历',nav_order=0)
     page('cv.md',tr('详细履历'),'/cv/',detail,nav=True,nav_label='Full CV' if LANG=='en' else '详细履历',nav_order=4)
 
 def validate_bilingual():

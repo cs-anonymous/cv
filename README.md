@@ -4,9 +4,9 @@
 
 ## 页面
 
-- `/`：简洁履历，教育、代表研究、主要工程经历与奖励。
+- `/`：完整履历首页，教育、研究、工程实践、交流实习、技术与语言、论文和奖励。
 - `/research/`：详细研究经历；eXpath 属于研究，GeneticPrism 聚焦层次图与布局算法，CueIR 仅简述在研状态。
-- `/experience/`：工程实践，包括 GeneticFlow、MaterAgent、数据分类分级与商汤。
+- `/experience/`：工程实践，包括 GeneticFlow、MaterAgent、数据分类分级和材料研发平台。
 - `/publications/`：论文列表及状态，不将投稿稿件计为录用。
 - `/cv/`：完整履历。
 - `/assets/pdf/Ye-Sun-Resume-ZH.pdf`：唯一固定简历 PDF（2 页 A4）。
