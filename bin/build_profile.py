@@ -62,26 +62,28 @@ def page(name,title,path,content,nav=False,nav_label=None,nav_order=None):
     fm+=['---','',f'<link rel="stylesheet" href="{local("/assets/css/profile.css")}">','<div class="profile-content">',content,'</div>','']
     (ROOT/'_pages'/(pref+name)).write_text('\n'.join(fm))
 
+def page_from_source(name,title,path,source,nav_label=None,nav_order=None):
+    """Reuse a hand-authored page body while updating its generated front matter."""
+    parts=source.read_text().split('---',2)
+    if len(parts) != 3:
+        raise ValueError(f'Expected front matter in {source}')
+    body=parts[2].lstrip('\n')
+    pref='en-' if LANG=='en' else ''
+    other=path if LANG=='en' else '/en'+path
+    fm=['---','layout: page',f'title: "{title}"',f'permalink: {route(path)}',f'lang: {LANG}',f'alternate_url: {other}',f'nav_label: "{nav_label or title}"','nav: true',f'nav_order: {nav_order}','---','']
+    (ROOT/'_pages'/(pref+name)).write_text('\n'.join(fm)+body)
+
 def pages_for_language():
     research_order={'geneticprism':0,'expath':1,'ruledep':2,'inspire':3,'cueir':4}
     experience_order={'materagent':0,'geneticflow':1,'classification':2,'materials':3,'sensetime-aigc':4,'sensetime-tools':5}
-    intro=personal();edu=''.join(entry(x) for x in D['education']);research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)))
+    research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)))
     engineering_ids={'materagent','geneticflow','classification','materials'}
-    internship_ids={'sensetime-aigc','sensetime-tools'}
     engineering=''.join(entry(x,paragraph=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in engineering_ids)
-    internships=''.join(entry(x,paragraph=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in internship_ids)
-    internships=entry(D['visit'])+internships
-    awards='<ul>'+''.join('<li>'+esc(a)+'</li>' for a in D['awards'])+'</ul>'
-    def heading(s,ident=''): return f'<h2'+(f' id="{ident}"' if ident else '')+'>'+tr(s)+'</h2>'
-    skills='<dl class="skills-list">'+''.join(f'<div><dt>{esc(x["label"])}</dt><dd>{esc(x["text"])}</dd></div>' for x in D['skills'])+'</dl>'
-    toc='<nav class="toc" aria-label="'+('CV sections' if LANG=='en' else '履历目录')+'">'+''.join(f'<a href="#{i}">{tr(t)}</a>' for i,t in [('education','教育经历'),('research','研究经历'),('engineering','工程实践'),('internships','交流实习'),('skills','技术与语言'),('publications','论文列表')])+'</nav>'
     page('research.md',tr('研究经历'),'/research/',research)
     page('experience.md',tr('工程实践'),'/experience/',engineering)
     page('publications.md',tr('论文列表'),'/publications/',papers())
-    detail=intro+toc
-    detail+=heading('教育经历','education')+edu+heading('研究经历','research')+research+heading('工程实践','engineering')+engineering+heading('交流实习','internships')+internships+heading('技术与语言','skills')+skills+heading('论文列表','publications')+papers()+heading('荣誉奖励')+awards
-    page('about.md','Ye Sun · 孙烨' if LANG=='en' else '孙烨 · Ye Sun','/',detail,nav=True,nav_label='Home' if LANG=='en' else '简历',nav_order=0)
-    page('cv.md',tr('详细履历'),'/cv/',detail,nav=True,nav_label='Full CV' if LANG=='en' else '详细履历',nav_order=4)
+    cv_source=ROOT/'_pages'/('en-cv.md' if LANG=='en' else 'cv.md')
+    page_from_source('about.md','Ye Sun · 孙烨' if LANG=='en' else '孙烨 · Ye Sun','/',cv_source,nav_label='Home' if LANG=='en' else '简历',nav_order=0)
 
 def validate_bilingual():
     zh=json.loads((ROOT/'_data/profile.json').read_text())

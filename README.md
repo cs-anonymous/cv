@@ -15,7 +15,7 @@
 
 ## 内容维护
 
-中文内容在 `_data/profile.json`，对应英文译稿在 `_data/profile.en.json`。更新事实时同步两个文件；相同条目保留同一 ID。当前网页内容以 `../info/孙烨-算法工程师，研究员-博士在读.pdf` 为事实锚点；PDF 中每个独立段落在网页中保留为独立要点，不自行合并或扩写。
+研究、工程和其他专题页的中文内容在 `_data/profile.json`，对应英文译稿在 `_data/profile.en.json`。首页与完整履历以 `_pages/cv.md` 和 `_pages/en-cv.md` 为内容源，首页构建时复用完整履历正文。更新事实时同步对应数据或 CV 页面；相同条目保留同一 ID。当前网页内容以 `../info/孙烨-算法工程师，研究员-博士在读.pdf` 为事实锚点；PDF 中每个独立段落在网页中保留为独立要点，不自行合并或扩写。
 
 ```sh
 python bin/build_profile.py --pages-only
