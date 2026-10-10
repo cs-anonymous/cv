@@ -70,49 +70,52 @@
         "On ASAP, reduces PP HR by 15.2% against PianistTransformer; architecture and inference-flow optimization reduces the reported test-task inference cost by 95.3%, improving deployability and iteration efficiency."
       ],
       "links": {}
-    },
-    {
-      "id": "cueir",
-      "title": "CueIR · Long-term agent memory",
-      "period": "2026.08–Present",
-      "status": "Ongoing research",
-      "summary": "Designs a traceable long-term memory system for agents, organizing cross-session information with Episodes, Cues, and a relation graph for hybrid retrieval, graph expansion, and evidence reconstruction.",
-      "details": [
-        "Implements memory-graph construction, agent tool calls, and on-demand evidence reconstruction with evidence-sufficiency checks, verification, and provenance tracking.",
-        "Evaluates accurate retrieval, long-range understanding, and selective forgetting on LoCoMo and MemoryAgentBench."
-      ],
-      "links": {}
     }
   ],
   "experience": [
     {
       "id": "materagent",
       "title": "MaterAgent · Agent Harness for materials R&D",
-      "period": "Mar 2026–Present",
-      "org": "Software development · MaterBrain",
-      "summary": "Understands the PI-Agent framework through agent interaction, including the agent loop, runtime, plugin model, and lifecycle, and participates in Agent Harness architecture design for end-to-end materials R&D.",
+      "period": "Jan 2026–Present",
+      "org": "Architecture design, software development",
+      "summary": "Participates in the industry-academic collaboration with MaterBrain, helping deploy the agent runtime and supporting tools in materials R&D workflows. Develops a deep understanding of the PI-Agent framework and its core technologies, maps the agent loop, runtime, plugin model, and lifecycle, and contributes to Agent Harness architecture design for end-to-end materials R&D.",
       "details": [
-        "Designs MCP tools for materials R&D, writes tool specifications, and uses agent interaction to implement, integrate, and validate them.",
-        "Designed and developed a Paper Browser MCP tool for automated retrieval and question answering over several thousand materials-science papers.",
-        "Participates in the advisor's industry-academic collaboration with MaterBrain, moving agent execution infrastructure and supporting tools into materials R&D workflows."
+        "Designed and developed Paper Browser and Database MCPs: Paper Browser searches papers by DOI, title, or full text and reads paragraph and table evidence from papers or sections; Database MCP supports structured queries and BM25 plus dense retrieval for materials R&D databases, returning ranked records, retrieval scores, and metadata.",
+        "Built a materials QA benchmark with 10 tasks and 140 questions, covering single-record lookup, constrained filtering and ranking, process summarization, paper evidence retrieval, and mechanism analysis."
+      ]
+    },
+    {
+      "id": "itas",
+      "title": "Software Engineering course project: ITAS · Intelligent Text Annotation System",
+      "period": "2024.03–2025.01",
+      "org": "Product manager, software developer",
+      "summary": "Led requirements analysis, product planning, and implementation. ITAS is a multi-domain system for scientific-literature annotation and information extraction.",
+      "details": [
+        "Supports batch PDF upload, paragraph and entity annotation, review, model export, and few-shot extraction with large language models.",
+        "Built a BM25 + RAG few-shot workflow that returns structured JSON for precursors, amounts, and synthesis conditions; achieved macro-F1 0.94 across three MOF datasets and 0.77 zero-shot."
       ]
     },
     {
       "id": "classification",
-      "title": "Research-agent-based data classification",
+      "title": "University–industry collaboration project: Research-agent-based data classification",
       "period": "2024.12–2025.05",
-      "org": "Research-group collaborative project",
-      "summary": "Developed LLM entity-extraction tools and a RAG-based data classification pipeline for sensitive-data annotation and refinement.",
-      "details": []
+      "org": "Architecture design, software development",
+      "summary": "Led development of LLM-based entity-recognition tools and built a retrieval-augmented generation (RAG) data-classification and grading system for automated sensitive-data annotation and dynamic refinement.",
+      "details": [
+        "The system has five core modules: prompt generation, model interfaces, RAG retrieval augmentation, result processing, and performance evaluation, connected through an end-to-end classify workflow.",
+        "Applied across steel production, education, and other domains; supports sample-library, classification-standard, project, task, and environment management, with more than 100,000 records in the pending-classification database.",
+        "The team was recognized among Beihang University’s Top 10 Outstanding Teams in Artificial Intelligence."
+      ]
     },
     {
       "id": "geneticflow",
       "title": "GeneticFlow V2.0 · Large-scale scholarly literature visualization system",
       "period": "Sep 2023–Present",
-      "org": "Independent development and operations",
-      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction; the system has served 102,129 users, supported 507,827 visits, and received software copyright registration.",
+      "org": "Algorithm research, software development, operations",
+      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction; the system has served 110,419 users, supported 540,440 visits, and received software copyright registration.",
       "details": [
-        "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations."
+        "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations.",
+        "ACM Fellow Ion Stoica commented: \"This is interesting, especially the visualization.\""
       ]
     },
     {
@@ -136,12 +139,12 @@
     {
       "id": "materials",
       "title": "National Key R&D Program: Rare-earth catalysis knowledge graph and full-process digital R&D platform",
-      "period": "Sep 2021–Aug 2024 · National Key R&D Program subproject",
+      "period": "Sep 2021–Aug 2024",
       "org": "Subproject assistant",
       "summary": "Led construction of the database and materials knowledge graph, participating throughout the project from proposal to acceptance and ensuring scheduled delivery reviews.",
       "details": [
-        "Designed and built a multimodal materials database at the 10^5 scale by integrating heterogeneous data to support synthesis-condition recommendation and knowledge discovery.",
-        "Implemented synthesis-condition recommendation and knowledge-discovery functions based on the knowledge graph to support intelligent materials R&D workflows."
+        "Designed and built a multimodal materials database at the 10^5 scale with 46,701 synthesis conditions, integrating heterogeneous data.",
+        "Applied the knowledge graph to synthesis-condition recommendation and knowledge discovery to support intelligent materials R&D workflows."
       ]
     }
   ],
@@ -204,42 +207,42 @@
     },
     {
       "title": "INSPIRE: Integrated Note-based Score Performance Interpretation, Rendering and Expression",
-      "authors": "Ye Sun (first author)",
+      "authors": "Ye Sun, Lei Shi",
       "venue": "AAAI 2027 · Revision (initial review passed)",
       "role": "First author",
       "url": ""
     },
     {
-      "title": "“It’s the model, folks.” An Extra Summative Evaluation Factor for Visual Analytics",
+      "title": "Model Literacy: An Extra Summative Evaluation Factor for Visual Analytics",
       "authors": "",
-      "venue": "IEEE VIS 2026 · Accepted",
+      "venue": "VIS Workshop 2026",
       "role": "Fourth author",
-      "url": ""
+      "url": "https://arxiv.org/abs/2608.18721"
     },
     {
-      "title": "LLM-Based High-Performance Material Synthesis Route Extraction using Human-AI-Curated Few-Shot Demonstrations",
+      "title": "MaterialBrain: high-performance material synthesis extraction via human–AI-curated few-shot large language models",
       "authors": "",
-      "venue": "JACS 2025 · Accepted",
+      "venue": "JACS 2026 · Accepted",
       "role": "Ninth author of 18",
-      "url": ""
+      "url": "https://pubs.acs.org/jcisd8/article-abstract/66/1/228/5080242"
     },
     {
-      "title": "How “Applied” is Fifteen Years of VAST Conference?",
+      "title": "How “applied” is fifteen years of VAST conference?",
       "authors": "Lei Shi, Lei Xia, Zipeng Liu, Ye Sun, Huijie Guo, Klaus Mueller",
       "venue": "IEEE VIS 2023 · Accepted",
       "role": "Fourth author",
-      "url": ""
+      "url": "https://ieeexplore.ieee.org/abstract/document/10360912/"
     },
     {
-      "title": "RankFIRST: Visual Analysis for Factor Investment by Ranking Stock Timeseries",
+      "title": "Rankfirst: Visual analysis for factor investment by ranking stock timeseries",
       "authors": "",
       "venue": "IEEE TVCG 2022 · Accepted",
       "role": "Fourth author",
-      "url": ""
+      "url": "https://ieeexplore.ieee.org/abstract/document/9904441/"
     },
     {
       "title": "Rare-earth materials knowledge graph based on multi-source heterogeneous data (translated title)",
-      "authors": "",
+      "authors": "Ye Sun, Lei Shi",
       "venue": "HHME 2022 · Accepted",
       "role": "First author",
       "url": ""

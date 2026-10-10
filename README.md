@@ -9,7 +9,7 @@
 - `/experience/`：工程实践，包括 GeneticFlow、MaterAgent、数据分类分级和材料研发平台。
 - `/publications/`：论文列表及状态，不将投稿稿件计为录用。
 - `/cv/`：完整履历。
-- `/assets/pdf/Ye-Sun-Resume-ZH.pdf`：唯一固定简历 PDF（2 页 A4）。
+- `/assets/孙烨-算法-博士在读.pdf`：下载用的固定简历 PDF。
 
 顶栏提供博客、Google Scholar、哔哩哔哩、下载简历、语言和主题切换。首页包含研究、工程、技术与语言和论文列表，正文不重复放置这些外部主页链接。
 

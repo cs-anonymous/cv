@@ -34,7 +34,9 @@ def papers():
         title=esc(x['title'])
         if x['url']: title=f'<a href="{esc(x["url"])}">{title}</a>'
         out+=f'<section class="entry"><div class="pub-title">{title}</div>'
-        if x['authors']: out+=f'<div class="pub-authors">{esc(x["authors"])}</div>'
+        if x['authors']:
+            authors=esc(x['authors']).replace('Ye Sun','<u>Ye Sun</u>').replace('孙烨','<u>孙烨</u>')
+            out+=f'<div class="pub-authors">{authors}</div>'
         out+=f'<div class="meta">{esc(x["venue"])} · {esc(x["role"])}</div></section>'
     return out
 
@@ -75,10 +77,11 @@ def page_from_source(name,title,path,source,nav_label=None,nav_order=None):
 
 def pages_for_language():
     research_order={'geneticprism':0,'expath':1,'ruledep':2,'inspire':3,'cueir':4}
-    experience_order={'materagent':0,'geneticflow':1,'classification':2,'materials':3,'sensetime-aigc':4,'sensetime-tools':5}
+    # Keep engineering entries in chronological order by their start date.
+    experience_order={'sensetime-tools':0,'materials':1,'sensetime-aigc':2,'geneticflow':3,'itas':4,'classification':5,'materagent':6}
     research=''.join(entry(x,True) for x in sorted(D['research'],key=lambda x: research_order.get(x.get('id'),99)))
-    engineering_ids={'materagent','geneticflow','classification','materials'}
-    engineering=''.join(entry(x,paragraph=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in engineering_ids)
+    engineering_ids={'materagent','classification','itas','geneticflow','materials'}
+    engineering=''.join(entry(x,detailed=True) for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)) if x.get('id') in engineering_ids)
     page('research.md',tr('研究经历'),'/research/',research)
     page('experience.md',tr('工程实践'),'/experience/',engineering)
     page('publications.md',tr('论文列表'),'/publications/',papers())
@@ -164,7 +167,8 @@ def pdfs():
         section(story,'研究经历')
         for x in D['research']: item(story,x,True)
         section(story,'工程实践与企业合作')
-        for x in D['experience']: item(story,x,True)
+        experience_order={'sensetime-tools':0,'materials':1,'sensetime-aigc':2,'geneticflow':3,'itas':4,'classification':5,'materagent':6}
+        for x in sorted(D['experience'],key=lambda x: experience_order.get(x.get('id'),99)): item(story,x,True)
         skills_block=[p('技术与语言','h2')]
         for x in D['skills']:
             skills_block.extend([p(x['label'],'h3'),p(x['text'])])

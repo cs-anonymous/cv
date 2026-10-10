@@ -25,6 +25,23 @@
   padding: 0.65rem 0;
   border-bottom: 1px solid var(--global-divider-color, #ddd);
 }
+.profile-content .entry.has-media {
+  display: flow-root;
+  min-height: 9rem;
+}
+.profile-content .entry-media {
+  float: right;
+  display: block;
+  width: 30%;
+  max-width: 30%;
+  height: auto;
+  max-height: 12rem;
+  object-fit: contain;
+  margin: 0 0 0.75rem 1.25rem;
+  border: 1px solid var(--global-divider-color, #ddd);
+  border-radius: 4px;
+  background: #fff;
+}
 .profile-content .entry h3 {
   font-size: 1.16rem;
   line-height: 1.5;
@@ -110,6 +127,16 @@
   .profile-content .skills-list > div {
     grid-template-columns: 1fr;
     gap: 0.15rem;
+  }
+}
+@media (max-width: 700px) {
+  .profile-content .entry-media {
+    float: none;
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 14rem;
+    margin: 0.5rem 0 0.75rem;
   }
 }
 @media print {
