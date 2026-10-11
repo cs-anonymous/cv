@@ -77,6 +77,16 @@
   ],
   "experience": [
     {
+      "id": "sensetime-tools",
+      "title": "SenseTime · Model toolchain intern",
+      "period": "2021.06–2022.08",
+      "org": "",
+      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools.",
+      "details": [
+        "Received an Outstanding Intern award for performance on the project."
+      ]
+    },
+    {
       "id": "materials",
       "title": "National Key R&D Program: Rare-earth catalysis knowledge graph and full-process digital R&D platform",
       "period": "Sep 2021–Aug 2024",
@@ -86,7 +96,19 @@
         "Designed and built a multimodal materials database at the 10^5 scale with 46,701 synthesis conditions, integrating heterogeneous data.",
         "Applied the knowledge graph to synthesis-condition recommendation and knowledge discovery to support intelligent materials R&D workflows."
       ],
-      "links": { "Code": "https://gitee.com/sun__ye/mofs-kg" }
+      "links": {
+        "Code": "https://gitee.com/sun__ye/mofs-kg"
+      }
+    },
+    {
+      "id": "sensetime-aigc",
+      "title": "SenseTime · AI full-stack engineering intern",
+      "period": "2023.02–2023.08",
+      "org": "Miaohua",
+      "summary": "Contributed deeply to the Miaohua AI-drawing system, designing and implementing back-end APIs for efficient and stable core drawing calls.",
+      "details": [
+        "Led development of a Discord-based intelligent bot that connected efficiently to the AI-drawing core APIs and served over 1,000 users."
+      ]
     },
     {
       "id": "geneticflow",
@@ -98,7 +120,9 @@
         "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations.",
         "ACM Fellow Ion Stoica commented: \"This is interesting, especially the visualization.\""
       ],
-      "links": { "Code": "https://github.com/visdata/GeneticPrism" }
+      "links": {
+        "Code": "https://github.com/visdata/GeneticPrism"
+      }
     },
     {
       "id": "itas",
@@ -110,7 +134,9 @@
         "Supports batch PDF upload, paragraph and entity annotation, review, model export, and few-shot extraction with large language models.",
         "Built a BM25 + RAG few-shot workflow that returns structured JSON for precursors, amounts, and synthesis conditions; achieved macro-F1 0.94 across three MOF datasets and 0.77 zero-shot."
       ],
-      "links": { "Code": "https://github.com/cs-anonymous/ITAS" }
+      "links": {
+        "Code": "https://github.com/cs-anonymous/ITAS"
+      }
     },
     {
       "id": "classification",
@@ -123,7 +149,9 @@
         "Applied across steel production, education, and other domains; supports sample-library, classification-standard, project, task, and environment management, with more than 100,000 records in the pending-classification database.",
         "The team was recognized among Beihang University’s Top 10 Outstanding Teams in Artificial Intelligence."
       ],
-      "links": { "Code": "https://gitee.com/sun__ye/ler" }
+      "links": {
+        "Code": "https://gitee.com/sun__ye/ler"
+      }
     },
     {
       "id": "materagent",
@@ -136,37 +164,19 @@
         "Designed and developed MCP tools: Paper Browser searches papers by DOI, title, or full text and reads paragraph and table evidence from papers or sections; Database MCP supports structured queries and BM25 plus dense retrieval for materials R&amp;D databases, returning ranked records, retrieval scores, and metadata.",
         "Built a materials QA benchmark with 10 tasks and 100 questions, covering single-record lookup, constrained filtering and ranking, process summarization, paper evidence retrieval, and mechanism analysis."
       ],
-      "links": { "Code": "https://lab.materialbrain.com/materialbrain/material-agent" }
-    },
-    {
-      "id": "sensetime-tools",
-      "title": "SenseTime · Model toolchain intern",
-      "period": "2021.06–2022.08",
-      "org": "",
-      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools.",
-      "details": [
-        "Received an Outstanding Intern award for performance on the project."
-      ]
-    },
-    {
-      "id": "sensetime-aigc",
-      "title": "SenseTime · AI full-stack engineering intern",
-      "period": "2023.02–2023.08",
-      "org": "Miaohua",
-      "summary": "Contributed deeply to the Miaohua AI-drawing system, designing and implementing back-end APIs for efficient and stable core drawing calls.",
-      "details": [
-        "Led development of a Discord-based intelligent bot that connected efficiently to the AI-drawing core APIs and served over 1,000 users."
-      ]
+      "links": {
+        "Code": "https://lab.materialbrain.com/materialbrain/material-agent"
+      }
     }
   ],
   "skills": [
     {
       "label": "Programming languages",
-      "text": "Proficient in Python, Java, and C/C++, with at least 10,000 lines of code written in each; familiar with Kotlin/JVM."
+      "text": "Proficient in Python, Java, and C/C++; familiar with Kotlin/JVM."
     },
     {
       "label": "Machine learning",
-      "text": "Familiar with machine-learning principles and PyTorch, scikit-learn, and Transformers; scored above 90 in machine learning, data mining, deep learning, and related courses."
+      "text": "Familiar with machine-learning principles and PyTorch, scikit-learn, and Transformers."
     },
     {
       "label": "Systems and back-end development",
@@ -174,17 +184,17 @@
     },
     {
       "label": "Front-end and visualization",
-      "text": "Familiar with JavaScript, HTML, CSS, D3, and Vue; completed computer graphics coursework, served as a visualization course teaching assistant, and contributed substantially to visualization work accepted at a CCF-A venue."
+      "text": "Familiar with JavaScript, HTML, CSS, D3, and Vue; completed computer graphics coursework and served as a visualization course teaching assistant."
     },
     {
-      "label": "English and certification",
-      "text": "TOEFL 105; GRE 327; ranked in the top 8.79% in the CCF CSP certification."
+      "label": "English",
+      "text": "TOEFL 105; GRE 327."
     }
   ],
   "visit": {
-    "title": "Technical University of Munich · Research visit",
+    "title": "Technical University of Munich · Visiting PhD Student",
     "period": "Sep–Dec 2025",
-    "text": "Worked with Prof. Stephen Kobourov on knowledge graph visualization and graph drawing; subsequently collaborated with Maribel Acosta on rule-based reasoning."
+    "text": "Conducted a CSC-funded research visit at TUM, ranked 26th globally in QS; worked with Prof. Stephen Kobourov on a knowledge graph and ontology visualization survey submitted to EuroVis STAR, and with Prof. Maribel Acosta on RuleDep, accepted at ICDE 2027."
   },
   "awards": [
     "Beihang University Graduate National Scholarship · 2026",

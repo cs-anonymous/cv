@@ -77,6 +77,16 @@
   ],
   "experience": [
     {
+      "id": "sensetime-tools",
+      "title": "商汤科技有限公司 · 模型工具链实习生",
+      "period": "2021.06–2022.08",
+      "org": "",
+      "summary": "参与训练集群调度工具链的研发工作，主导开发集群远程登录与管理命令行工具（spring.remote）及系统监控工具。",
+      "details": [
+        "凭借在该项目中的突出表现，荣获“优秀实习生”荣誉称号。"
+      ]
+    },
+    {
       "id": "materials",
       "title": "国家重点研发计划：稀土催化材料知识图谱与全流程数字研发平台",
       "period": "2021.09–2024.08",
@@ -86,7 +96,19 @@
         "设计并构建规模达10^5级别的多模态材料数据库，包含46,701条合成条件，整合多源异构数据。",
         "将知识图谱应用于合成条件推荐与知识发现，支撑材料智能化研发流程。"
       ],
-      "links": { "代码": "https://gitee.com/sun__ye/mofs-kg" }
+      "links": {
+        "代码": "https://gitee.com/sun__ye/mofs-kg"
+      }
+    },
+    {
+      "id": "sensetime-aigc",
+      "title": "商汤科技有限公司 · AI 全栈工程师实习生",
+      "period": "2023.02–2023.08",
+      "org": "秒画",
+      "summary": "深度参与“秒画”AI绘画项目系统研发，负责后端API设计与实现，支撑核心绘画接口的高效调用与稳定运行。",
+      "details": [
+        "主导开发基于Discord平台的智能机器人应用，实现与AI绘画核心接口的高效对接，所在服务器服务于上千名用户。"
+      ]
     },
     {
       "id": "geneticflow",
@@ -98,7 +120,9 @@
         "从 Graphviz C++ 源码编译浏览器端布局组件，打通图布局计算与前端可视交互链路，独立完成前后端开发与系统运维。",
         "著名 ACM Fellow Ion Stoica 评价：“This is interesting, especially the visualization”。"
       ],
-      "links": { "代码": "https://github.com/visdata/GeneticPrism" }
+      "links": {
+        "代码": "https://github.com/visdata/GeneticPrism"
+      }
     },
     {
       "id": "itas",
@@ -110,7 +134,9 @@
         "支持 PDF 批量上传、段落与实体标注、审核、模型导出，并通过大语言模型与 few-shot 学习提取预设信息。",
         "系统应用于大规模材料文献抽取，构建 BM25 + RAG few-shot 抽取流程，输出前驱体、用量和合成条件的结构化 JSON；三个 MOF 数据集 macro-F1 达 0.94，相比于 zero-shot 0.77 提升32.9%。"
       ],
-      "links": { "代码": "https://github.com/cs-anonymous/ITAS" }
+      "links": {
+        "代码": "https://github.com/cs-anonymous/ITAS"
+      }
     },
     {
       "id": "classification",
@@ -123,7 +149,9 @@
         "支持样本库、分类标准、项目、任务和环境管理，包含提示词生成、模型接口、RAG、结果处理和性能评价 5 个核心模块。",
         "面向钢铁生产、教育等多个领域数据库规模超过 10 万条。团队获评北京航空航天大学人工智能领域十大优秀团队称号。"
       ],
-      "links": { "代码": "https://gitee.com/sun__ye/ler" }
+      "links": {
+        "代码": "https://gitee.com/sun__ye/ler"
+      }
     },
     {
       "id": "materagent",
@@ -136,37 +164,19 @@
         "设计并开发 MCP 工具：Paper Browser 支持按 DOI、标题或正文检索论文，并读取论文或章节中的段落、表格等证据；Database MCP 面向材料研发数据库提供结构化查询与 BM25、dense 双路检索，返回排序记录、检索分数和元数据。",
         "构建覆盖 10 个任务共 100 题的材料 QA benchmark，涵盖单条查询、条件筛选与排序、工艺归纳、论文取证和机理分析。"
       ],
-      "links": { "代码": "https://lab.materialbrain.com/materialbrain/material-agent" }
-    },
-    {
-      "id": "sensetime-tools",
-      "title": "商汤科技有限公司 · 模型工具链实习生",
-      "period": "2021.06–2022.08",
-      "org": "",
-      "summary": "参与训练集群调度工具链的研发工作，主导开发集群远程登录与管理命令行工具（spring.remote）及系统监控工具。",
-      "details": [
-        "凭借在该项目中的突出表现，荣获“优秀实习生”荣誉称号。"
-      ]
-    },
-    {
-      "id": "sensetime-aigc",
-      "title": "商汤科技有限公司 · AI 全栈工程师实习生",
-      "period": "2023.02–2023.08",
-      "org": "秒画",
-      "summary": "深度参与“秒画”AI绘画项目系统研发，负责后端API设计与实现，支撑核心绘画接口的高效调用与稳定运行。",
-      "details": [
-        "主导开发基于Discord平台的智能机器人应用，实现与AI绘画核心接口的高效对接，所在服务器服务于上千名用户。"
-      ]
+      "links": {
+        "代码": "https://lab.materialbrain.com/materialbrain/material-agent"
+      }
     }
   ],
   "skills": [
     {
       "label": "编程语言",
-      "text": "掌握 Python、Java、C/C++，各语言累计代码量均不少于一万行；熟悉 Kotlin/JVM。"
+      "text": "掌握 Python、Java、C/C++；熟悉 Kotlin/JVM。"
     },
     {
       "label": "机器学习",
-      "text": "熟悉机器学习原理及 PyTorch、scikit-learn、Transformers；机器学习、数据挖掘、深度学习等课程成绩均在 90 分以上。"
+      "text": "熟悉机器学习原理及 PyTorch、scikit-learn、Transformers。"
     },
     {
       "label": "系统与后端",
@@ -174,17 +184,17 @@
     },
     {
       "label": "前端与可视化",
-      "text": "熟悉 JavaScript、HTML、CSS、D3、Vue；修读计算机图形学，担任可视化课程助教，主要参与的可视化项目已被 CCF-A 类会议录用。"
+      "text": "熟悉 JavaScript、HTML、CSS、D3、Vue；修读计算机图形学，担任可视化课程助教。"
     },
     {
-      "label": "英语与认证",
-      "text": "TOEFL 105，GRE 327；CCF CSP 认证排名前 8.79%。"
+      "label": "英语",
+      "text": "TOEFL 105，GRE 327。"
     }
   ],
   "visit": {
-    "title": "慕尼黑工业大学 · 科研访学",
+    "title": "慕尼黑工业大学 · 访问博士生",
     "period": "2025.09–2025.12",
-    "text": "与 Stephen Kobourov 教授开展知识图谱可视化与图绘制研究；后续与 Maribel Acosta 合作开展规则推理研究。"
+    "text": "凭借 CSC 国家公派资助，赴 QS 全球排名第 26 的慕尼黑工业大学开展访问研究；与 Stephen Kobourov 教授合作撰写知识图谱与本体可视化综述并投稿 EuroVis STAR，与 Maribel Acosta 教授合作完成 RuleDep 并被 ICDE 2027 录用。"
   },
   "awards": [
     "北京航空航天大学研究生国家奖学金 · 2026",
