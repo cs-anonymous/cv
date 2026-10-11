@@ -29,29 +29,18 @@
   display: flow-root;
   min-height: 9rem;
 }
-.profile-content .entry-media-link {
+.profile-content .entry-media {
   float: right;
   display: block;
   width: 28%;
   max-width: 28%;
-  line-height: 0;
-  margin: 0 0 0.75rem 1.25rem;
-}
-.profile-content .entry-media {
-  display: block;
-  width: 100%;
-  max-width: 100%;
   height: auto;
   max-height: 12rem;
   object-fit: contain;
+  margin: 0 0 0.75rem 1.25rem;
   border: 1px solid var(--global-divider-color, #ddd);
   border-radius: 4px;
   background: #fff;
-  cursor: zoom-in;
-  transition: opacity 0.15s ease;
-}
-.profile-content .entry-media-link:hover .entry-media {
-  opacity: 0.88;
 }
 .profile-content .entry h3 {
   font-size: 1.16rem;
@@ -141,7 +130,7 @@
   }
 }
 @media (max-width: 700px) {
-  .profile-content .entry-media-link {
+  .profile-content .entry-media {
     float: none;
     display: block;
     width: 100%;
@@ -149,9 +138,6 @@
     max-width: 100%;
     max-height: 14rem;
     margin: 0.5rem 0 0.75rem;
-  }
-  .profile-content .entry-media-link .entry-media {
-    max-height: 14rem;
   }
 }
 @media print {
