@@ -14,7 +14,7 @@
     {
       "title": "Beihang University · Computer Science and Technology",
       "period": "Sep 2021–Jun 2027",
-      "text": "Integrated master’s–PhD program, School of Computer Science and Engineering. Master’s stage: Sep 2021–Jun 2023; PhD stage: Sep 2023–Jun 2027 (expected). GPA: 3.87/4.00; rank: 13/143. Major-course scores include Data Mining (100), Algorithm Design and Analysis (94), Software Engineering (95), and Pattern Recognition (93). Research focuses on knowledge graph reasoning, data mining, and visual analytics; related results have appeared in multiple CCF-A papers."
+      "text": "Integrated master’s–PhD program, School of Computer Science and Engineering. Master’s stage: Sep 2021–Jun 2023; PhD stage: Sep 2023–Jun 2027 (expected). GPA: 3.87/4.00; CSC Government Scholarship for Study Abroad (2025); rank: 13/143. Major-course scores include Data Mining (100), Algorithm Design and Analysis (94), Software Engineering (95), and Pattern Recognition (93). Research focuses on knowledge graph reasoning, data mining, and visual analytics; related results have appeared in multiple CCF-A papers."
     }
   ],
   "research": [
@@ -29,7 +29,8 @@
         "On standard benchmarks, improves two explanation-quality metrics by approximately 20% and reduces explanation-generation time by 61.4% against the best comparison method, demonstrating gains in both explanation quality and computational efficiency."
       ],
       "links": {
-        "Code": "https://github.com/cs-anonymous/eXpath"
+        "Code": "https://github.com/cs-anonymous/eXpath",
+        "PDF": "/assets/pdf/eXpath-VLDB-2025.pdf"
       }
     },
     {
@@ -42,7 +43,8 @@
         "Across seven datasets, raises average MRR from 0.382 to 0.396, achieves 21 best or tied-best metrics among interpretable methods, and improves MRR by approximately 10.7% on dependency-rich subsets."
       ],
       "links": {
-        "Code": "https://github.com/cs-anonymous/RuleDep"
+        "Code": "https://github.com/cs-anonymous/RuleDep",
+        "PDF": "/assets/pdf/RuleDep-ICDE-2027.pdf"
       }
     },
     {
@@ -56,7 +58,8 @@
       ],
       "links": {
         "Code": "https://github.com/visdata/GeneticPrism",
-        "Live system": "https://genetic-flow.com/"
+        "Live system": "https://genetic-flow.com/",
+        "PDF": "/assets/pdf/GeneticPrism-TVCG-2025.pdf"
       }
     },
     {
@@ -74,26 +77,40 @@
   ],
   "experience": [
     {
-      "id": "materagent",
-      "title": "MaterAgent · Agent Harness for materials R&D",
-      "period": "Jan 2026–Present",
-      "org": "Architecture design, software development",
-      "summary": "Participates in the industry-academic collaboration with MaterBrain, helping deploy the agent runtime and supporting tools in materials R&D workflows. Develops a deep understanding of the PI-Agent framework and its core technologies, maps the agent loop, runtime, plugin model, and lifecycle, and contributes to Agent Harness architecture design for end-to-end materials R&D.",
+      "id": "materials",
+      "title": "National Key R&D Program: Rare-earth catalysis knowledge graph and full-process digital R&D platform",
+      "period": "Sep 2021–Aug 2024",
+      "org": "Subproject assistant",
+      "summary": "Led construction of the database and materials knowledge graph, participating throughout the project from proposal to acceptance and ensuring scheduled delivery reviews.",
       "details": [
-        "Designed and developed Paper Browser and Database MCPs: Paper Browser searches papers by DOI, title, or full text and reads paragraph and table evidence from papers or sections; Database MCP supports structured queries and BM25 plus dense retrieval for materials R&D databases, returning ranked records, retrieval scores, and metadata.",
-        "Built a materials QA benchmark with 10 tasks and 140 questions, covering single-record lookup, constrained filtering and ranking, process summarization, paper evidence retrieval, and mechanism analysis."
-      ]
+        "Designed and built a multimodal materials database at the 10^5 scale with 46,701 synthesis conditions, integrating heterogeneous data.",
+        "Applied the knowledge graph to synthesis-condition recommendation and knowledge discovery to support intelligent materials R&D workflows."
+      ],
+      "links": { "Code": "https://gitee.com/sun__ye/mofs-kg" }
+    },
+    {
+      "id": "geneticflow",
+      "title": "GeneticFlow V2.0 · Large-scale scholarly literature visualization system",
+      "period": "Sep 2023–Sep 2025",
+      "org": "Algorithm research, software development, operations",
+      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction; the system has served 110,419 users, supported 540,440 visits, and received software copyright registration.",
+      "details": [
+        "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations.",
+        "ACM Fellow Ion Stoica commented: \"This is interesting, especially the visualization.\""
+      ],
+      "links": { "Code": "https://github.com/visdata/GeneticPrism" }
     },
     {
       "id": "itas",
-      "title": "Software Engineering course project: ITAS · Intelligent Text Annotation System",
-      "period": "2024.03–2025.01",
+      "title": "Software Engineering course project: Multi-domain Intelligent Text Annotation and Mining System (ITAS)",
+      "period": "Mar 2024–Jan 2025",
       "org": "Product manager, software developer",
       "summary": "Led requirements analysis, product planning, and implementation. ITAS is a multi-domain system for scientific-literature annotation and information extraction.",
       "details": [
         "Supports batch PDF upload, paragraph and entity annotation, review, model export, and few-shot extraction with large language models.",
         "Built a BM25 + RAG few-shot workflow that returns structured JSON for precursors, amounts, and synthesis conditions; achieved macro-F1 0.94 across three MOF datasets and 0.77 zero-shot."
-      ]
+      ],
+      "links": { "Code": "https://github.com/cs-anonymous/ITAS" }
     },
     {
       "id": "classification",
@@ -105,17 +122,30 @@
         "The system has five core modules: prompt generation, model interfaces, RAG retrieval augmentation, result processing, and performance evaluation, connected through an end-to-end classify workflow.",
         "Applied across steel production, education, and other domains; supports sample-library, classification-standard, project, task, and environment management, with more than 100,000 records in the pending-classification database.",
         "The team was recognized among Beihang University’s Top 10 Outstanding Teams in Artificial Intelligence."
-      ]
+      ],
+      "links": { "Code": "https://gitee.com/sun__ye/ler" }
     },
     {
-      "id": "geneticflow",
-      "title": "GeneticFlow V2.0 · Large-scale scholarly literature visualization system",
-      "period": "Sep 2023–Present",
-      "org": "Algorithm research, software development, operations",
-      "summary": "Leads development of a multidimensional visualization system for million-scale scholarly literature, integrating graph-layout computation with visual interaction; the system has served 110,419 users, supported 540,440 visits, and received software copyright registration.",
+      "id": "materagent",
+      "title": "MaterAgent · Agent Harness for materials R&D",
+      "period": "Mar 2026–Present",
+      "org": "Software development · New Material Intelligence / MaterBrain",
+      "summary": "Participates in the industry-academic collaboration with MaterBrain, helping deploy the agent runtime and supporting tools in materials R&D workflows. Develops a deep understanding of the PI-Agent framework and its core technologies, maps the agent loop, runtime, plugin model, and lifecycle, and contributes to Agent Harness architecture design for end-to-end materials R&D.",
       "details": [
-        "Compiles Graphviz C++ sources into browser-side layout components, connecting graph-layout computation with front-end interaction through independent full-stack development and operations.",
-        "ACM Fellow Ion Stoica commented: \"This is interesting, especially the visualization.\""
+        "Participates in the industry-academic collaboration with MaterBrain, helping deploy the agent runtime and supporting tools in materials R&amp;D workflows. Develops a deep understanding of the PI-Agent framework and its core technologies, maps the agent loop, runtime, plugin model, and lifecycle, and contributes to Agent Harness architecture design for end-to-end materials R&amp;D.",
+        "Designed and developed MCP tools: Paper Browser searches papers by DOI, title, or full text and reads paragraph and table evidence from papers or sections; Database MCP supports structured queries and BM25 plus dense retrieval for materials R&amp;D databases, returning ranked records, retrieval scores, and metadata.",
+        "Built a materials QA benchmark with 10 tasks and 100 questions, covering single-record lookup, constrained filtering and ranking, process summarization, paper evidence retrieval, and mechanism analysis."
+      ],
+      "links": { "Code": "https://lab.materialbrain.com/materialbrain/material-agent" }
+    },
+    {
+      "id": "sensetime-tools",
+      "title": "SenseTime · Model toolchain intern",
+      "period": "2021.06–2022.08",
+      "org": "",
+      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools.",
+      "details": [
+        "Received an Outstanding Intern award for performance on the project."
       ]
     },
     {
@@ -126,25 +156,6 @@
       "summary": "Contributed deeply to the Miaohua AI-drawing system, designing and implementing back-end APIs for efficient and stable core drawing calls.",
       "details": [
         "Led development of a Discord-based intelligent bot that connected efficiently to the AI-drawing core APIs and served over 1,000 users."
-      ]
-    },
-    {
-      "id": "sensetime-tools",
-      "title": "SenseTime · Model toolchain intern",
-      "period": "2021.06–2022.08",
-      "org": "",
-      "summary": "Contributed to training-cluster scheduling toolchains and led development of the spring.remote command-line tool for remote cluster login and management, as well as system monitoring tools.",
-      "details": ["Received an Outstanding Intern award for performance on the project."]
-    },
-    {
-      "id": "materials",
-      "title": "National Key R&D Program: Rare-earth catalysis knowledge graph and full-process digital R&D platform",
-      "period": "Sep 2021–Aug 2024",
-      "org": "Subproject assistant",
-      "summary": "Led construction of the database and materials knowledge graph, participating throughout the project from proposal to acceptance and ensuring scheduled delivery reviews.",
-      "details": [
-        "Designed and built a multimodal materials database at the 10^5 scale with 46,701 synthesis conditions, integrating heterogeneous data.",
-        "Applied the knowledge graph to synthesis-condition recommendation and knowledge discovery to support intelligent materials R&D workflows."
       ]
     }
   ],
@@ -176,6 +187,8 @@
     "text": "Worked with Prof. Stephen Kobourov on knowledge graph visualization and graph drawing; subsequently collaborated with Maribel Acosta on rule-based reasoning."
   },
   "awards": [
+    "Beihang University Graduate National Scholarship · 2026",
+    "CSC Government Scholarship for Study Abroad · 2025",
     "Beihang University First-Class Graduate Scholarship · 2021, 2023, 2025, 2026",
     "ACT Laboratory Academic Contribution Award · 2026",
     "Beihang University Top Ten Outstanding Teams in Artificial Intelligence · 2025",
@@ -249,12 +262,30 @@
     }
   ],
   "personal": [
-    ["Location", "Beijing, China"],
-    ["Affiliation", "School of Computer Science and Engineering, Beihang University"],
-    ["Program", "PhD in Software Engineering · integrated master’s–PhD track"],
-    ["Advisor", "Prof. Lei Shi"],
-    ["Expected graduation", "June 2027"],
-    ["University email", "sunie@buaa.edu.cn"]
+    [
+      "Location",
+      "Beijing, China"
+    ],
+    [
+      "Affiliation",
+      "School of Computer Science and Engineering, Beihang University"
+    ],
+    [
+      "Program",
+      "PhD in Software Engineering · integrated master’s–PhD track"
+    ],
+    [
+      "Advisor",
+      "Prof. Lei Shi"
+    ],
+    [
+      "Expected graduation",
+      "June 2027"
+    ],
+    [
+      "University email",
+      "sunie@buaa.edu.cn"
+    ]
   ],
   "contact": {
     "phone": "13872530255",
